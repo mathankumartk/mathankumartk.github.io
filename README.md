@@ -1,2 +1,2 @@
-# mathankumartk..github.io
+# mathankumartk.github.io
 Data Science Portfolio
