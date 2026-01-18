@@ -78,3 +78,7 @@ A comprehensive list of references is provided in the document, including source
 ## How to Use This Document
 
 This document serves as a comprehensive analysis of ChatGPT's impact on the world. It can be used by researchers, businesses, healthcare professionals, and policymakers to understand the opportunities, challenges, and ethical considerations associated with ChatGPT and Generative AI tools.
+
+## Contact
+
+For any questions or feedback, please contact Mathan Kumar Thavu Mudaliar Kanagaraj at [mathankumartk@gmail.com](mailto:mathankumartk@gmail.com).
