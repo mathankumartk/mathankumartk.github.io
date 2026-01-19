@@ -112,11 +112,11 @@ h1 {
 }
 
 .project-title {
-    font-size: 1.25em;
+    font-size: 1.00em;
     color: #333;
     margin-bottom: 12px;
-    font-weight: 600;
-    line-height: 1.35;
+    font-weight: 400;
+    line-height: 1.05;
 }
 
 .project-link {
