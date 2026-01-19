@@ -22,14 +22,13 @@ body {
     overflow: hidden;
 }
 
-/* ────────────── Smaller / shorter hero ────────────── */
 .hero {
     background-image: url('background_pic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding: 20px 30px;          /* was 60px 40px → reduced */
+    padding: 10px 20px;          /* was 60px 40px → reduced */
     text-align: center;
 }
 
@@ -160,7 +159,7 @@ h1 {
     font-size: 0.9em;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .hero {
         padding: 30px 20px;
@@ -176,6 +175,6 @@ h1 {
         padding: 30px 20px;
     }
     .projects-grid {
-        max-height: 580px;      /* slightly smaller on mobile */
+        max-height: 580px;      
     }
 }
