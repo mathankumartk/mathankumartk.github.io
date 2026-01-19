@@ -8,6 +8,26 @@
     overflow: hidden;     /* ← still good – protects rounded corners */
 }
 
+.hero {
+            background-image: url('background_pic.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+ }
+
+ .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
 /* Adjust projects-section to become the scroll container */
 .projects-section {
     padding: 40px 30px;
