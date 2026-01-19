@@ -28,30 +28,30 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding: 10px 20px;          /* was 60px 40px → reduced */
+    padding: 5px 10px;          
     text-align: center;
 }
 
 .profile-img {
-    width: 140px;                /* was 180px → smaller */
-    height: 140px;
+    width: 140px;               
+    height: 100px;
     border-radius: 50%;
     border: 5px solid white;
     object-fit: cover;
-    margin-bottom: 16px;         /* reduced spacing */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 10px;         
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 }
 
 h1 {
-    font-size: 2.1em;            /* was 2.5em → smaller */
-    margin-bottom: 8px;
-    font-weight: 700;
+    font-size: 1.5em;            /* was 2.5em → smaller */
+    margin-bottom: 6px;
+    font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .tagline {
-    font-size: 1.05em;           /* was 1.2em → smaller */
-    margin-bottom: 20px;
+    font-size: 0.80em;           /* was 1.2em → smaller */
+    margin-bottom: 10px;
     opacity: 0.95;
 }
 
@@ -59,9 +59,9 @@ h1 {
     display: inline-block;
     background: white;
     color: black;
-    padding: 10px 28px;          /* slightly smaller button */
+    padding: 5px 14px;          /* slightly smaller button */
     text-decoration: none;
-    border-radius: 30px;
+    border-radius: 10px;
     font-weight: 600;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
@@ -74,7 +74,7 @@ h1 {
 
 /* ────────────── Scrollable projects section ────────────── */
 .projects-section {
-    padding: 40px 30px;          /* slightly reduced from 50px 40px */
+    padding: 40px 30px;         
 }
 
 .section-title {
