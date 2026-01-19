@@ -16,34 +16,65 @@ body {
     position: fixed; /* Fix the header at the top */
     width: 100%;
     z-index: 1000; /* Ensure it stays on top */
+    text-align: center;
+}
+
+.profile {
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+}
+
+.linkedin {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007BFF; /* Link color */
+}
+
+.hero-section {
+    background-image: url('background_pic.jpg');
+    height: 300px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
 }
 
 .project-list {
-    margin-top: 100px; /* Space below the fixed header */
-    height: calc(100vh - 100px); /* Full height minus header height */
+    margin-top: 350px; /* Space below the fixed header */
+    height: calc(100vh - 350px); /* Full height minus header height */
     overflow-y: scroll; /* Enable vertical scrolling */
-    background-color: #fff; /* Background color for the list */
     padding: 20px;
+    background-color: #fff; /* Background color for the list */
 }
 
 .project-list h3 {
     margin-top: 0;
 }
 
-.project-list ul {
-    list-style: none;
-    padding: 0;
+.projects {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.project-list li {
-    margin: 10px 0;
+.project-tile {
+    background-color: #eaeaea; /* Tile background color */
+    border: 1px solid #ccc; /* Tile border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Internal spacing */
+    margin: 10px; /* Space between tiles */
+    width: calc(30% - 20px); /* Adjust tile width */
+    text-align: center;
 }
 
-.project-list a {
+.project-tile a {
     text-decoration: none;
     color: #007BFF; /* Link color */
 }
 
-.project-list a:hover {
+.project-tile a:hover {
     text-decoration: underline; /* Underline on hover */
 }
