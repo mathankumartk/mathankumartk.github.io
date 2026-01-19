@@ -1,54 +1,192 @@
-/* ────────────── Ultra-compact hero ────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+/* ────────────── Much shorter hero ────────────── */
 .hero {
     background-image: url('background_pic.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    padding: 10px 16px;           /* very tight padding */
+    padding: 10px 16px;
     text-align: center;
-    min-height: unset;            /* remove forced minimum */
+    min-height: 70px;
 }
 
 .profile-img {
-    width: 70px;                  /* even smaller avatar */
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    border: 3px solid white;
+    border: 4px solid white;
     object-fit: cover;
-    margin-bottom: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    margin-bottom: 10px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
 }
 
 h1 {
-    font-size: 1.35em;            /* significantly smaller name */
-    margin-bottom: 2px;
+    font-size: 1.15em;
+    margin-bottom: 4px;
     font-weight: 700;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    letter-spacing: -0.3px;
+    letter-spacing: -0.5px;
 }
 
 .tagline {
-    font-size: 0.82em;            /* very compact tagline */
-    margin-bottom: 8px;
-    opacity: 0.9;
-    line-height: 1.2;
+    font-size: 0.75em;
+    margin-bottom: 12px;
+    opacity: 0.92;
 }
 
 .linkedin-btn {
     display: inline-block;
     background: white;
     color: black;
-    padding: 6px 18px;
+    padding: 8px 22px;
     text-decoration: none;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 0.84em;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    font-size: 0.92em;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
 }
 
 .linkedin-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 14px rgba(0,0,0,0.28);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* ────────────── Scrollable projects section ────────────── */
+.projects-section {
+    padding: 40px 30px;
+}
+
+.section-title {
+    font-size: 1.9em;
+    color: black;
+    margin-bottom: 28px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    max-height: 620px;
+    overflow-y: auto;
+    padding-right: 8px;
+    scroll-behavior: smooth;
+}
+
+.projects-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.project-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 24px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.project-title {
+    font-size: 1.25em;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.project-link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 16px;
+    border: 2px solid black;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.project-link:hover {
+    background: black;
+    color: white;
+}
+
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 22px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 12px 16px;
+    }
+    h1 {
+        font-size: 1.45em;
+    }
+    .profile-img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+    .tagline {
+        font-size: 0.88em;
+        margin-bottom: 10px;
+    }
+    .linkedin-btn {
+        padding: 7px 18px;
+        font-size: 0.88em;
+    }
+    .projects-section {
+        padding: 30px 20px;
+    }
+    .projects-grid {
+        max-height: 580px;
+    }
 }
