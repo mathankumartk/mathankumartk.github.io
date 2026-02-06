@@ -35,7 +35,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #ff4d4d; /* Light Red */
+    color: #00bfff; /* Light Blue */
     letter-spacing: 0.5px;
 }
 
@@ -61,7 +61,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #a50000 0%, #4a0000 100%); /* Red gradient */
+    background: linear-gradient(135deg, #1e90ff 0%, #0d47a1 100%); /* Blue gradient */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -92,7 +92,7 @@ body {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #b30000 0%, #700000 100%); /* Dark Red gradient */
+    background: linear-gradient(135deg, #004080 0%, #001f3f 100%); /* Dark Blue gradient */
     color: #fff; /* White text */
     padding: 1rem 3rem;
     font-size: 1rem;
