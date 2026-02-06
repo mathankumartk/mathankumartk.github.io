@@ -7,20 +7,20 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     line-height: 1.6;
 }
 
 /* Navigation */
 .navbar {
-    background-color: #000;
+    background-color: #000; /* Black navbar */
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #444; /* Darker border */
 }
 
 .nav-container {
@@ -35,7 +35,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #9b8fd4;
+    color: #ff4d4d; /* Light Red */
     letter-spacing: 0.5px;
 }
 
@@ -46,7 +46,7 @@ body {
 }
 
 .nav-link {
-    color: #fff;
+    color: #fff; /* White text */
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
@@ -56,12 +56,12 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #d4af37;
+    color: #ffcc00; /* Gold on hover */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #900000 0%, #000000 100%);
+    background: linear-gradient(135deg, #a50000 0%, #4a0000 100%); /* Red gradient */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -78,22 +78,22 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #d4af37;
+    color: #ffcc00; /* Gold */
     margin-bottom: 2rem;
     line-height: 1.2;
 }
 
 .hero-text {
     font-size: 1.15rem;
-    color: #FFD700;
+    color: #d1d1d1; /* Light Gray */
     margin-bottom: 3rem;
     line-height: 1.8;
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(135deg, #6b5b95 0%, #8b7a45 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #b30000 0%, #700000 100%); /* Dark Red gradient */
+    color: #fff; /* White text */
     padding: 1rem 3rem;
     font-size: 1rem;
     font-weight: 600;
@@ -105,12 +105,12 @@ body {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.3); /* Gold shadow */
 }
 
 /* Projects Section */
 .projects {
-    background-color: #000;
+    background-color: #000; /* Black background */
     padding: 6rem 2rem;
     min-height: 100vh;
 }
@@ -123,14 +123,14 @@ body {
 .projects-title {
     font-size: 3rem;
     font-weight: 700;
-    color: #d4af37;
+    color: #ffcc00; /* Gold */
     text-align: center;
     margin-bottom: 1rem;
 }
 
 .projects-subtitle {
     font-size: 1.15rem;
-    color: #e8e8e8;
+    color: #d1d1d1; /* Light Gray */
     text-align: center;
     margin-bottom: 4rem;
 }
@@ -144,7 +144,7 @@ body {
 
 /* Project Cards */
 .project-card {
-    background-color: #1a1a1a;
+    background-color: #1a1a1a; /* Dark background */
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -153,14 +153,14 @@ body {
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 12px 30px rgba(255, 204, 0, 0.2); /* Gold shadow */
 }
 
 .project-image {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    background-color: #2a2a2a;
+    background-color: #2a2a2a; /* Dark Gray */
 }
 
 .project-image img {
@@ -176,20 +176,20 @@ body {
 
 .project-content {
     padding: 2rem;
-    background-color: #0a0a0a;
+    background-color: #0a0a0a; /* Dark background */
 }
 
 .project-title {
     font-size: 1.35rem;
     font-weight: 600;
-    color: #d4af37;
+    color: #ffcc00; /* Gold */
     margin-bottom: 1rem;
     line-height: 1.4;
 }
 
 .project-description {
     font-size: 0.95rem;
-    color: #b8b8b8;
+    color: #b8b8b8; /* Light Gray */
     line-height: 1.6;
 }
 
