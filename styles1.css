@@ -14,7 +14,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: #000; /* Black navbar */
+    background-color: #001f3f; /* Navy blue navbar */
     padding: 1.5rem 0;
     position: fixed;
     width: 100%;
@@ -35,7 +35,7 @@ body {
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #00bfff; /* Light Blue */
+    color: #ffd700; /* Gold */
     letter-spacing: 0.5px;
 }
 
@@ -61,7 +61,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #1e90ff 0%, #0d47a1 100%); /* Blue gradient */
+    background: linear-gradient(135deg, #ff7f50 0%, #ff4500 100%); /* Orange gradient */
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ body {
 .hero-title {
     font-size: 3.5rem;
     font-weight: 700;
-    color: #ffcc00; /* Gold */
+    color: #001f3f; /* Navy */
     margin-bottom: 2rem;
     line-height: 1.2;
 }
