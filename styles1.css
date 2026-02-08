@@ -193,6 +193,189 @@ body {
     line-height: 1.6;
 }
 
+/* About Section */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+.about-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    font-weight: 400;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Left Column - Profile Card */
+.profile-card {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    border: 1px solid #333333;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-image-wrapper {
+    margin-bottom: 25px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 3px solid #D4AF37;
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.profile-role-label {
+    color: #D4AF37;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.profile-role {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.profile-detail {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.profile-detail-label {
+    color: #D4AF37;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.profile-detail-value {
+    color: #cccccc;
+    font-size: 0.95rem;
+}
+
+.resume-button {
+    width: 100%;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #8B4789 0%, #D4AF37 100%);
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Right Column - Content */
+.profile-content {
+    padding-top: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: #D4AF37;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section-text {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.section-text strong {
+    color: #D4AF37;
+    font-weight: 600;
+}
+
+.experience-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 3px solid #D4AF37;
+}
+
+.experience-title {
+    font-size: 1.1rem;
+    color: #D4AF37;
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    font-size: 0.95rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.education-section {
+    margin-top: 40px;
+}
+
+.education-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid #D4AF37;
+    border-radius: 4px;
+}
+
+.education-degree {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.education-school {
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -222,6 +405,29 @@ body {
     }
 }
 
+@media (max-width: 968px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .profile-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+}
+
 @media (max-width: 480px) {
     .nav-container {
         flex-direction: column;
@@ -243,210 +449,3 @@ body {
         font-size: 0.9rem;
     }
 }
-
-/* About Section */
-16.about-section {
-17    max-width: 1200px;
-18    margin: 0 auto;
-19    padding: 60px 20px;
-20}
-21
-22.about-header {
-23    text-align: center;
-24    margin-bottom: 60px;
-25}
-26
-27.about-title {
-28    font-size: 2.5rem;
-29    font-weight: 700;
-30    color: #D4AF37;
-31    margin-bottom: 10px;
-32}
-33
-34.about-subtitle {
-35    font-size: 1.1rem;
-36    color: #cccccc;
-37    font-weight: 400;
-38}
-39
-40.about-content {
-41    display: grid;
-42    grid-template-columns: 350px 1fr;
-43    gap: 60px;
-44    align-items: start;
-45}
-46
-47/* Left Column - Profile Card */
-48.profile-card {
-49    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-50    border: 1px solid #333333;
-51    border-radius: 12px;
-52    padding: 30px;
-53    text-align: center;
-54}
-55
-56.profile-image-wrapper {
-57    margin-bottom: 25px;
-58}
-59
-60.profile-image {
-61    width: 200px;
-62    height: 200px;
-63    border-radius: 8px;
-64    object-fit: cover;
-65    border: 3px solid #D4AF37;
-66}
-67
-68.profile-info {
-69    margin-bottom: 30px;
-70}
-71
-72.profile-role-label {
-73    color: #D4AF37;
-74    font-size: 0.9rem;
-75    font-weight: 600;
-76    margin-bottom: 8px;
-77    text-transform: uppercase;
-78    letter-spacing: 1px;
-79}
-80
-81.profile-role {
-82    font-size: 1.1rem;
-83    color: #ffffff;
-84    margin-bottom: 25px;
-85}
-86
-87.profile-detail {
-88    margin-bottom: 20px;
-89    text-align: left;
-90}
-91
-92.profile-detail-label {
-93    color: #D4AF37;
-94    font-size: 0.85rem;
-95    font-weight: 600;
-96    margin-bottom: 5px;
-97    text-transform: uppercase;
-98    letter-spacing: 0.5px;
-99}
-100
-101.profile-detail-value {
-102    color: #cccccc;
-103    font-size: 0.95rem;
-104}
-105
-106.resume-button {
-107    width: 100%;
-108    padding: 15px 30px;
-109    background: linear-gradient(135deg, #8B4789 0%, #D4AF37 100%);
-110    border: none;
-111    border-radius: 8px;
-112    color: #ffffff;
-113    font-size: 1rem;
-114    font-weight: 600;
-115    text-transform: uppercase;
-116    letter-spacing: 1px;
-117    cursor: pointer;
-118    transition: transform 0.3s ease, box-shadow 0.3s ease;
-119}
-120
-121.resume-button:hover {
-122    transform: translateY(-2px);
-123    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-124}
-125
-126/* Right Column - Content */
-127.profile-content {
-128    padding-top: 10px;
-129}
-130
-131.section-title {
-132    font-size: 1.5rem;
-133    color: #D4AF37;
-134    margin-bottom: 20px;
-135    font-weight: 600;
-136}
-137
-138.section-text {
-139    color: #cccccc;
-140    font-size: 1rem;
-141    line-height: 1.8;
-142    margin-bottom: 40px;
-143}
-144
-145.section-text strong {
-146    color: #D4AF37;
-147    font-weight: 600;
-148}
-149
-150.experience-item {
-151    margin-bottom: 30px;
-152    padding-left: 20px;
-153    border-left: 3px solid #D4AF37;
-154}
-155
-156.experience-title {
-157    font-size: 1.1rem;
-158    color: #D4AF37;
-159    margin-bottom: 5px;
-160}
-161
-162.experience-company {
-163    font-size: 0.95rem;
-164    color: #ffffff;
-165    margin-bottom: 10px;
-166}
-167
-168.experience-description {
-169    color: #cccccc;
-170    font-size: 0.95rem;
-171    line-height: 1.7;
-172}
-173
-174.education-section {
-175    margin-top: 40px;
-176}
-177
-178.education-item {
-179    margin-bottom: 15px;
-180    padding: 15px;
-181    background: rgba(212, 175, 55, 0.05);
-182    border-left: 3px solid #D4AF37;
-183    border-radius: 4px;
-184}
-185
-186.education-degree {
-187    font-size: 1rem;
-188    color: #ffffff;
-189    font-weight: 600;
-190    margin-bottom: 5px;
-191}
-192
-193.education-school {
-194    color: #cccccc;
-195    font-size: 0.9rem;
-196}
-197
-198/* Responsive Design */
-199@media (max-width: 968px) {
-200    .about-content {
-201        grid-template-columns: 1fr;
-202        gap: 40px;
-203    }
-204
-205    .profile-card {
-206        max-width: 400px;
-207        margin: 0 auto;
-208    }
-209}
-210
-211@media (max-width: 640px) {
-212    .about-title {
-213        font-size: 2rem;
-214    }
-215
-216    .profile-image {
-217        width: 160px;
-218        height: 160px;
-219    }
-220}
