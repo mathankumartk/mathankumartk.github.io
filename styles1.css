@@ -193,11 +193,12 @@ body {
     line-height: 1.6;
 }
 
-/* About Section */
+/* About Section - FIXED WITH FLEXBOX */
 .about-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 60px 20px;
+    background-color: #000;
 }
 
 .about-header {
@@ -218,15 +219,19 @@ body {
     font-weight: 400;
 }
 
+/* CRITICAL FIX: Using Flexbox instead of Grid */
 .about-content {
-    display: grid;
-    grid-template-columns: 350px 1fr;
+    display: flex;
+    flex-direction: row;
     gap: 60px;
-    align-items: start;
+    align-items: flex-start;
+    width: 100%;
 }
 
 /* Left Column - Profile Card */
 .profile-card {
+    flex: 0 0 350px;
+    width: 350px;
     background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
     border: 1px solid #333333;
     border-radius: 12px;
@@ -244,6 +249,8 @@ body {
     border-radius: 8px;
     object-fit: cover;
     border: 3px solid #D4AF37;
+    display: block;
+    margin: 0 auto;
 }
 
 .profile-info {
@@ -282,6 +289,7 @@ body {
 .profile-detail-value {
     color: #cccccc;
     font-size: 0.95rem;
+    line-height: 1.5;
 }
 
 .resume-button {
@@ -297,6 +305,7 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
 }
 
 .resume-button:hover {
@@ -306,6 +315,8 @@ body {
 
 /* Right Column - Content */
 .profile-content {
+    flex: 1;
+    min-width: 0;
     padding-top: 10px;
 }
 
@@ -338,6 +349,7 @@ body {
     font-size: 1.1rem;
     color: #D4AF37;
     margin-bottom: 5px;
+    font-weight: 600;
 }
 
 .experience-company {
@@ -403,17 +415,22 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
-}
-
-@media (max-width: 968px) {
+    
+    /* Stack profile section on mobile */
     .about-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 40px;
     }
 
     .profile-card {
+        flex: 0 0 auto;
+        width: 100%;
         max-width: 400px;
         margin: 0 auto;
+    }
+
+    .profile-content {
+        width: 100%;
     }
 }
 
