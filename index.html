@@ -3,268 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: white; /* Background color */
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px; /* Increased container width */
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-
-        .hero {
-            background-image: url('background_pic.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-            min-height: unset;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-        }
-
-        .tagline {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            opacity: 0.95;
-        }
-
-        .linkedin-btn {
-            display: inline-block;
-            background: white;
-            color: black; /* Changed font color to black */
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .linkedin-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-        }
-
-        .projects-section {
-            padding: 50px 40px;
-        }
-
-        .section-title {
-            font-size: 2em;
-            color: black; /* Changed font color to black */
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: 700;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
-            padding: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .project-number {
-            font-size: 0.9em;
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: none;
-        }
-
-        .project-title {
-            font-size: 1.3em;
-            color: #333;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: black; /* Changed font color to black */
-            text-decoration: none;
-            font-weight: 600;
-            padding: 6px 15px; /* Reduced size */
-            border: 2px solid black; /* Changed border color to black */
-            border-radius: 20px;
-            transition: all 0.3s;
-        }
-
-        .project-link:hover {
-            background: black;
-            color: white; /* Changed text color to white on hover */
-        }
-
-        .footer {
-            background: #2d3748;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .hero {
-                padding: 40px 20px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            .projects-section {
-                padding: 30px 20px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <title>My Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
-    <div class="container">
-        <section class="hero">
-            <img src="profile_pic.jpg" alt="Porfile Pic" class="profile-img">
-            <h1>my_name</h1>
-            <p class="tagline">Data Scientist | Machine Learning Engineer</p>
-            <a href="https://www.linkedin.com/in/my_link" target="_blank" class="linkedin-btn">
-                Connect on LinkedIn
-            </a>
-        </section>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Mathan Kumar</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#profile" class="nav-link">Profile</a></li>
+                <li><a href="https://github.com/mathankumartk/mathankumartk.github.io" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>          
+            </ul>
+        </div>
+    </nav>
 
-        <section class="projects-section">
-            <h2 class="section-title">Data Science Projects Portfolio</h2>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">From Data to Insight: My Data Science Portfolio</h1>
+            <p class="hero-text">
+                Welcome to my data science portfolio! This collection of projects showcases my analytical skills and my ability 
+                to turn complex data into actionable insights. Each project reflects my journey through the Master of Science 
+                in Data Science program at Bellevue University, where I tackled diverse topics that intersect with real-world 
+                challenges.
+            </p>
+            <a href="#projects" class="cta-button">MY PROJECTS</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-container">
+            <h2 class="projects-title">Data Science Projects</h2>
+            
             <div class="projects-grid">
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <h3 class="project-title">Assessing ChatGPT's Impact on Business, Healthcare, and Workforce – A Multi-Method Analysis of Trends, Market Data, and Adoption Patterns</h3>
-                    <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                    <div class="project-image">
+                        <img src="chatgpt_impact.jpg" alt="Impact of ChatGPT">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assessing ChatGPT's Impact on Business, Healthcare, and Workforce</h3>
+                        <p class="project-description">This project explores the impact of ChatGPT, a Generative Pretrained Transformer (GPT) developed by OpenAI, 
+                            on various aspects of society, including business enterprises, healthcare, workforce, and ethical considerations.</p>
+                    </div>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="project-card">
-                    <h3 class="project-title">Real-Time Weather Information Retrieval System – A Python-Based Application Using OpenWeatherMap API Integration</h3>
-                    <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                    <div class="project-image">
+                        <img src="student_performance.jpg" alt="Analyze Student Performance">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Leveraging Data Science to Analyze Student Performance</h3>
+                        <p class="project-description">This project aims to analyze and understand the factors influencing student performance, stress, 
+                            and academic success using data science methods.</p>
+                    </div>
                 </div>
 
+                <!-- Project 3 -->
                 <div class="project-card">
-                    <h3 class="project-title">Leveraging Data Science to Analyze Student Performance, Stress, and Academic Success</h3>
-                    <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                    <div class="project-image">
+                        <img src="housing_availability.jpg" alt="Evaluating Housing Affordability">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Evaluating Housing Affordability</h3>
+                        <p class="project-description">The objective of this project is to analyze and predict rental prices based on various factors such as area, 
+                            number of bedrooms, and availability of amenities like power backup.</p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Evaluating Housing Affordability – Insights from Statistical Analysis and Machine Learning</h3>
-                    <a href="https://github.com/yourusername/project4" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="social_progress.jpg" alt="Unveiling the Social Progress">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Unveiling the Social Progress</h3>
+                        <p class="project-description">The primary objective of this project is to analyze the relationships between crime rates, corruption perceptions, 
+                            and social progress indices across various countries to identify socio-economic patterns and insights that may 
+                            influence policy-making and development strategies.
+                        </p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Student Performance, Stress and Academic Success</h3>
-                    <a href="https://github.com/yourusername/project5" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="loan_default.jpg" alt="Assessing Loan Default Risks">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Assessing Loan Default Risks</h3>
+                        <p class="project-description">The objective of this project is to develop a comprehensive predictive model that identifies the likelihood of 
+                            loan defaults based on various borrower characteristics.</p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Unveiling the Social Progress – Statistical Insights on Crime and Corruption</h3>
-                    <a href="https://github.com/yourusername/project5" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="real_estate_affordability.jpg" alt="Harnessing Predictive Analytics in Real Estate">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Harnessing Predictive Analytics in Real Estate</h3>
+                        <p class="project-description">The objective of this project is to predict the sale prices of residential properties by analyzing various 
+                            features and characteristics that influence housing prices.
+                        </p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Assessing Loan Default Risks: A Machine Learning Framework for Loan Default Prediction</h3>
-                    <a href="https://github.com/yourusername/project6" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="childcare_affordability.jpg" alt="The Childcare Affordability Crisis">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">The Childcare Affordability Crisis</h3>
+                        <p class="project-description">This comprehensive data analysis project investigates the critical factors affecting child care affordability 
+                            across the United States, addressing a pressing challenge that impacts family stability, workforce participation, 
+                            and economic growth.
+                        </p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Harnessing Predictive Analytics in Real Estate – Predicting Residential Property Prices Using Advanced Models</h3>
-                    <a href="https://github.com/yourusername/project7" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="accident_severity.jpg" alt="Predicting US Traffic Accident Severity">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Predicting US Traffic Accident Severity</h3>
+                        <p class="project-description">This project aims to addresses the critical challenge faced by auto insurance companies, public safety agencies, 
+                            and transportation departments in transitioning from reactive accident response to proactive prevention and resource optimization.
+                        </p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">US Traffic Accident Severity Classification: A Supervised Machine Learning Analysis</h3>
-                    <a href="https://github.com/yourusername/project8" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="movie_performance.jpg" alt="Exploring Trends in Movie Performance">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Exploring Trends in Movie Performance</h3>
+                        <p class="project-description">The objective of this project aims to build and evaluate machine learning models
+                             that predict whether movies will receive high ratings (above 7.0).</p>
+                    </div>
                 </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Hollywood Analytics: Building Predictive Models for Movie Performance and Success</h3>
-                    <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
-                </div>
-
-                                <div class="project-card">
-                    <h3 class="project-title">Student Performance, Stress and Academic Success</h3>
-                    <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">
-                        GitHub →
-                    </a>
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="finance_fraud.jpg" alt="Classifying Anomalous Financial Transactions">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Classifying Anomalous Financial Transactions</h3>
+                        <p class="project-description">This project aims to develop a machine learning model that classifies financial transactions as 
+                            fraudulent or legitimate by analyzing historical transaction data and identifying patterns indicative of fraud.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="footer">
-            <p>&copy; 2026 My Name. All rights reserved.</p>
-        </footer>
-    </div>
+    <!-- Profile Section -->
+    <section id="profile" class="about-section">
+        <div class="about-header">
+            <h2 class="about-title">Mathan Kumar</h2>
+            <p class="about-subtitle">Advisor II Software Development Engineer | Project Portfolio Management | Aspiring Data Scientist</p>
+        </div>
+
+        <div class="about-content">
+            <!-- Left Column - Profile Card -->
+            <div class="profile-card">
+                <div class="profile-image-wrapper">
+                    <img src="profile_pic.jpg" alt="Profile Photo" class="profile-image">
+                </div>
+
+                <div class="profile-info">
+                    <p class="profile-role-label">Current Role</p>
+                    <p class="profile-role">Advisor II Software Development Engineering, Fiserv Inc.,</p>
+                </div>
+
+                <div class="profile-detail">
+                    <p class="profile-detail-label">Focus</p>
+                    <p class="profile-detail-value">Technical Consulting & Integration Specialist, Project and Portfolio Management</p>
+                </div>
+
+                <div class="profile-detail">
+                    <p class="profile-detail-label">Tech Stack</p>
+                    <p class="profile-detail-value">Clarity PPM, Gel Scripting, APIs, IMB MQ, Oracle, PL/SQL, Microsoft Power BI, Python</p>
+                </div>
+
+                <div class="profile-detail">
+                    <p class="profile-detail-label">Location</p>
+                    <p class="profile-detail-value">Omaha, NE</p>
+                </div>
+
+                <a href="https://www.linkedin.com/in/mathankumartk/" class="resume-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+
+            <!-- Right Column - Content -->
+            <div class="profile-content">
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="section-text">
+                    I hold a Bachelor's degree in Computer Technology and a Master's degree in Software Engineering. With over 20 years of experience in the software solutions industry, I have spent more than 18 years designing and implementing Project and Portfolio Management solutions across diverse industries and geographies. To further my passion for data science, I am currently pursuing a second Master’s degree in Data Science, where I am acquiring knowledge, skills, and practical experience in various disciplines. I am preparing to apply my machine learning and data analysis skills in real-world applications.
+                </p>
+
+                <h3 class="section-title">Selected Experience</h3>
+                
+                <div class="experience-item">
+                    <div class="experience-title">Advisor II Software Development Engineer — Fiserv Inc., (2020–Present)</div>
+                    <div class="experience-company"></div>
+                    <p class="experience-description">
+                        Design and Implement Integration Suits of various applications such as Jira, VersionOne, SalesForce, etc, with Clarity PPM using Gel Scripting and XOG [XML Open Gateway], APIs, and IBM MQ. Subject Matter Expertise in Project and Portfolio Management Solutions.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Principal Infra Developer — Cognizant Technology Solutions (2012–2020)</div>
+                    <div class="experience-company"></div>
+                    <p class="experience-description">
+                        Lead, Clarity PPM Competence, PPM Practice. Sales - Technical Solutions Proposals, Clarity PPM. Global Delivery, Techno Functional Areas, Clarity PPM. Design, Implement and Manage Clarity PPM Solutions.
+                    </p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-title">Earlier Roles</div>
+                    <div class="experience-company"></div>
+                    <p class="experience-description">
+                        Senior Software Engineer - Wipro Technologies || Senior Consultant - Capgemini India Pvt. Ltd. || System Analyst - Hexaware Technologies Ltd.
+                    </p>
+                </div>
+
+                <div class="education-section">
+                    <h3 class="section-title">Education</h3>
+                    
+                    <div class="education-item">
+                        <div class="education-degree">M.S., Data Science</div>
+                        <div class="education-school">Bellevue University (Mar 2024–Mar 2026)</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-degree">M.S., Software Engineering</div>
+                        <div class="education-school">Birla Institute of Technologies, Pilani, India</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="education-degree">BSc., Applied Science - Computer Technologies</div>
+                        <div class="education-school">Coimbatore Institute of Technologies, Coimbatore, India</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
