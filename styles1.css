@@ -469,22 +469,22 @@ body {
 /* Project Detail Section Styles */
 .project-detail {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background-color: #001f3f; /* Navy background like Projects section */
     min-height: 100vh;
 }
 
 .project-detail-container {
-    max-width: 1000px;
+    max-width: 1400px;
     margin: 0 auto;
-    background: white;
+    background: #1a1a1a; /* Dark background like project cards */
     border-radius: 12px;
     padding: 60px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .project-detail-title {
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: #ffcc00; /* Gold like other titles */
     margin-bottom: 30px;
     text-align: center;
     font-weight: 700;
@@ -502,19 +502,19 @@ body {
     align-items: center;
     gap: 10px;
     padding: 12px 30px;
-    background: #24292e;
+    background: linear-gradient(135deg, #004080 0%, #001f3f 100%); /* Dark blue gradient */
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .github-button:hover {
-    background: #0366d6;
+    background: linear-gradient(135deg, #005599 0%, #003366 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(3, 102, 214, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3); /* Gold shadow on hover */
 }
 
 .github-icon {
@@ -528,17 +528,17 @@ body {
 
 .section-heading {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: #ffcc00; /* Gold */
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #3498db;
+    border-bottom: 3px solid #ffcc00;
     font-weight: 700;
 }
 
 .section-content {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #d1d1d1; /* Light gray like hero text */
     text-align: justify;
 }
 
@@ -555,7 +555,7 @@ body {
     margin-bottom: 15px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #555;
+    color: #d1d1d1; /* Light gray */
 }
 
 .research-list li::before {
@@ -565,8 +565,8 @@ body {
     top: 0;
     width: 35px;
     height: 35px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: linear-gradient(135deg, #ff7f50 0%, #ff4500 100%); /* Orange gradient */
+    color: #001f3f; /* Navy text */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -578,14 +578,14 @@ body {
 .findings-subsection {
     margin-bottom: 35px;
     padding: 25px;
-    background: #f8f9fa;
+    background: #0a0a0a; /* Dark background like project card content */
     border-radius: 8px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #ffcc00; /* Gold border */
 }
 
 .subsection-title {
     font-size: 1.4rem;
-    color: #2c3e50;
+    color: #ffcc00; /* Gold */
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -607,7 +607,7 @@ body {
     margin-bottom: 12px;
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #555;
+    color: #b8b8b8; /* Light gray like project description */
 }
 
 .findings-list li::before,
@@ -615,7 +615,7 @@ body {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #27ae60;
+    color: #ffcc00; /* Gold */
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -624,7 +624,7 @@ body {
     content: "⚠";
     position: absolute;
     left: 0;
-    color: #e74c3c;
+    color: #ff7f50; /* Orange */
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -633,7 +633,7 @@ body {
     content: "●";
     position: absolute;
     left: 0;
-    color: #9b59b6;
+    color: #ffcc00; /* Gold */
     font-weight: bold;
     font-size: 1.3rem;
 }
@@ -641,7 +641,7 @@ body {
 .findings-content {
     font-size: 1.05rem;
     line-height: 1.7;
-    color: #555;
+    color: #b8b8b8;
     margin: 0;
 }
 
@@ -649,42 +649,35 @@ body {
     margin-top: 50px;
     text-align: center;
     padding-top: 30px;
-    border-top: 2px solid #eee;
+    border-top: 2px solid #333;
 }
 
 .back-button {
     display: inline-block;
     padding: 12px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #004080 0%, #001f3f 100%); /* Dark blue gradient */
     color: white;
     text-decoration: none;
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .back-button:hover {
+    background: linear-gradient(135deg, #005599 0%, #003366 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.3); /* Gold shadow */
 }
 
-.view-details-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+/* Project Title Link Styling */
+.project-title-link {
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
+    display: block;
 }
 
-.view-details-button:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+.project-title-link:hover .project-title {
+    color: #ffd700; /* Lighter gold on hover */
 }
 
 /* Responsive Design */
