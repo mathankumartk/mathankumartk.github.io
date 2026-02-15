@@ -466,3 +466,251 @@ body {
         font-size: 0.9rem;
     }
 }
+/* Project Detail Section Styles */
+.project-detail {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.project-detail-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    padding: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.project-detail-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 30px;
+    background: #24292e;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(36, 41, 46, 0.2);
+}
+
+.github-button:hover {
+    background: #0366d6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(3, 102, 214, 0.3);
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.project-section {
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+    font-weight: 700;
+}
+
+.section-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.research-list {
+    list-style: none;
+    counter-reset: research-counter;
+    padding-left: 0;
+}
+
+.research-list li {
+    counter-increment: research-counter;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.research-list li::before {
+    content: counter(research-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.findings-subsection {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+}
+
+.subsection-title {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.findings-list,
+.opportunities-list,
+.challenges-list,
+.ethics-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.findings-list li,
+.opportunities-list li,
+.challenges-list li,
+.ethics-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.findings-list li::before,
+.opportunities-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.challenges-list li::before {
+    content: "⚠";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.ethics-list li::before {
+    content: "●";
+    position: absolute;
+    left: 0;
+    color: #9b59b6;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.findings-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+.back-to-projects {
+    margin-top: 50px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 2px solid #eee;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.view-details-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.view-details-button:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-detail-container {
+        padding: 30px 20px;
+    }
+
+    .project-detail-title {
+        font-size: 1.8rem;
+    }
+
+    .section-heading {
+        font-size: 1.5rem;
+    }
+
+    .section-content,
+    .research-list li,
+    .findings-list li,
+    .opportunities-list li,
+    .challenges-list li,
+    .ethics-list li {
+        font-size: 1rem;
+    }
+
+    .subsection-title {
+        font-size: 1.2rem;
+    }
+}
