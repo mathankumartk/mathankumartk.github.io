@@ -115,7 +115,9 @@
                         <img src="real_estate_affordability.jpg" alt="Harnessing Predictive Analytics in Real Estate">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Harnessing Predictive Analytics in Real Estate</h3>
+                        <a href="#project_6" class="project-title-link">
+                            <h3 class="project-title">Harnessing Predictive Analytics in Real Estate</h3>
+                        </a>
                         <p class="project-description">The objective of this project is to predict the sale prices of residential properties by analyzing various 
                             features and characteristics that influence housing prices.
                         </p>
@@ -1013,6 +1015,207 @@
                     <li><strong>Feedback Loop:</strong> Implement a mechanism to capture actual loan outcomes and retrain the model periodically</li>
                     <li><strong>Retraining Pipeline:</strong> Establish an automated retraining mechanism as new data accumulates to keep the model aligned with market trends</li>
                     <li><strong>Explore Alternatives:</strong> As the dataset grows, consider Gradient Boosting or XGBoost models which may offer comparable accuracy with better scalability</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project #6 Detail Section -->
+    <section id="project_6" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Harnessing Predictive Analytics in Real Estate: Housing Price Prediction Using Machine Learning</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/6.%20Harnessing%20Predictive%20Analytics%20in%20Real%20Estate" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    This project develops a machine learning pipeline to predict the sale prices of residential properties by analyzing various 
+                    features and characteristics that influence housing markets. Using the Advance House Price Predictions dataset from Kaggle, 
+                    the study applies comprehensive data preprocessing, exploratory data analysis, feature engineering, and multi-model regression 
+                    evaluation — providing actionable insights for buyers, sellers, lenders, and real estate professionals to make informed, 
+                    data-driven decisions.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Problem Statement</h3>
+                <p class="section-content">
+                    Accurate housing price prediction is a critical challenge in real estate. Buyers risk overpaying without reliable market 
+                    valuation tools, while sellers may under- or over-price properties, impacting both returns and time-on-market. This project 
+                    addresses that gap by building regression models that estimate residential sale prices based on property attributes, enabling:
+                </p>
+                <ul class="findings-list">
+                    <li><strong>Home Buyers</strong> — trustworthy information for smart purchase decisions and effective negotiation</li>
+                    <li><strong>Home Sellers</strong> — data-driven pricing to attract buyers and maximize ROI</li>
+                    <li><strong>Mortgage Lenders</strong> — accurate property valuations for loan assessment and risk management</li>
+                    <li><strong>Appraisers &amp; Market Researchers</strong> — reliable tools for trend analysis and market evaluation</li>
+                    <li><strong>Government Agencies</strong> — insights supporting city planning, housing policy, and economic strategy</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> Kaggle — Advance House Price Predictions</li>
+                    <li><strong>Files:</strong> <code>train.csv</code> (training set), <code>test.csv</code> (test set)</li>
+                    <li><strong>Target Variable:</strong> <code>SalePrice</code> — Residential property sale price in USD</li>
+                </ul>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Key Features Retained for Modeling</h4>
+                    <ul class="findings-list">
+                        <li><strong>GrLivArea:</strong> Above-grade living area in square feet — strongest predictor of sale price</li>
+                        <li><strong>LotArea:</strong> Total lot size in square feet</li>
+                        <li><strong>OverallCond:</strong> Overall condition rating of the house</li>
+                        <li><strong>KitchenQual:</strong> Kitchen quality (Excellent, Good, Average, Fair, Poor)</li>
+                        <li><strong>BedroomAbvGr:</strong> Number of bedrooms above ground level</li>
+                        <li><strong>GarageCars:</strong> Garage capacity in number of cars</li>
+                        <li><strong>BsmtExposure:</strong> Basement exposure level</li>
+                        <li><strong>BsmtFinType1:</strong> Basement finish type</li>
+                        <li><strong>CentralAir:</strong> Central air conditioning (Y/N)</li>
+                        <li><strong>SalePrice:</strong> Target variable — sale price in USD</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">1. Data Loading &amp; Initial Assessment</h4>
+                    <ul class="findings-list">
+                        <li>Loaded training and test datasets into pandas DataFrames</li>
+                        <li>Assessed column types, distributions, and missing value counts</li>
+                        <li>Confirmed data quality: majority of key features had no missing values</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">2. Data Preparation</h4>
+                    <p class="section-content"><strong>Columns Dropped</strong> (non-essential or redundant): <code>Id</code>, <code>MSSubClass</code>, <code>MSZoning</code>, <code>LotFrontage</code>, secondary dimension columns, condition-state columns, and non-essential features such as <code>SaleCondition</code> and <code>RoofStyle</code>.</p>
+                    <p class="section-content"><strong>Missing Value Handling:</strong></p>
+                    <ul class="findings-list">
+                        <li><code>BsmtExposure</code> and <code>BsmtFinType1</code> NaN values → replaced with <code>"No Basement"</code></li>
+                        <li><code>MiscFeature</code> NaN values → replaced with <code>"No Misc Feature"</code></li>
+                        <li>Rows with NaN in <code>BsmtCond</code> and <code>BsmtFinType1</code> → dropped for Linear Regression and XGBoost models</li>
+                    </ul>
+                    <p class="section-content"><strong>Categorical Encoding:</strong></p>
+                    <ul class="findings-list">
+                        <li><strong>Binary Encoding:</strong> <code>CentralAir</code> (Y → 1, N → 0)</li>
+                        <li><strong>Ordinal Encoding:</strong> Quality and condition features — <code>KitchenQual</code>, <code>ExterQual</code>, <code>HeatingQC</code> mapped to numeric scale (Excellent=5 … Poor=1)</li>
+                        <li><strong>Ordinal Encoding (Basement):</strong> <code>BsmtFinType1</code> mapped from GLQ (6) to Unfin (1)</li>
+                        <li><strong>One-Hot Encoding:</strong> All remaining non-ordinal categoricals including <code>LandContour</code>, <code>BldgType</code>, <code>HouseStyle</code>, <code>Foundation</code>, <code>Functional</code></li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">3. Exploratory Data Analysis</h4>
+                    <ul class="findings-list">
+                        <li><strong>GrLivArea vs SalePrice (Scatter):</strong> Strong positive correlation — larger homes sell for higher prices</li>
+                        <li><strong>LotArea &amp; SalePrice Distribution (Histogram + KDE):</strong> Both distributions are right-skewed; most homes concentrated in lower price/area ranges</li>
+                        <li><strong>SalePrice by GarageCars (Box Plot):</strong> Clear upward price trend with increasing garage capacity; 2-car garages ≈ $200K median</li>
+                        <li><strong>SalePrice by KitchenQual (Box Plot):</strong> Higher kitchen quality strongly associated with higher and more variable sale prices</li>
+                        <li><strong>Correlation Heatmap:</strong> <code>GrLivArea</code> has the strongest positive correlation with <code>SalePrice</code>; <code>OverallCond</code> has near-zero correlation</li>
+                        <li><strong>SalePrice KDE:</strong> Right-skewed distribution with peak density ≈ $180,000; few homes above $300,000</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">4. Model Building &amp; Evaluation</h4>
+                    <p class="section-content">Three regression models were built and compared using an 80/20 train-validation split (<code>random_state=42</code>):</p>
+                    <ul class="findings-list">
+                        <li><strong>Random Forest (Best Model):</strong> MAE $17,735.98 | RMSE $28,505.57 — lowest error across all metrics</li>
+                        <li><strong>XGBoost:</strong> MAE $19,696.98 | RMSE $30,958.95</li>
+                        <li><strong>Linear Regression:</strong> MAE $24,005.45 | RMSE $40,058.08</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+                <ul class="findings-list">
+                    <li><strong>Ground living area (<code>GrLivArea</code>)</strong> is the single strongest predictor of sale price — larger homes consistently command higher prices</li>
+                    <li><strong>Garage capacity</strong> significantly impacts price — moving from 0 to 2 garage cars is associated with approximately double the median sale price (~$100K to ~$200K)</li>
+                    <li><strong>Kitchen quality</strong> shows a clear upward price trend — excellent kitchen homes show both higher median prices and greater variability</li>
+                    <li><strong>Overall condition</strong> alone is a weak predictor — buyers appear to value features and space over condition ratings</li>
+                    <li><strong>SalePrice distribution</strong> is right-skewed with a mean of ~$180,921; majority of homes sold in the $130K–$215K range</li>
+                    <li><strong>Random Forest outperforms</strong> both XGBoost and Linear Regression on all three error metrics, making it the recommended model for deployment</li>
+                </ul>
+            </div>
+
+            <!-- Charts for Housing Price Prediction -->
+            <div class="chart-container">
+                <img src="Z_6_Chart1.png" alt="Housing Price Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart2.png" alt="Housing Price Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart3.png" alt="Housing Price Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart4.png" alt="Housing Price Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart5.png" alt="Housing Price Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart6.png" alt="Housing Price Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_6_Chart7.png" alt="Housing Price Chart 5" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation, cleaning, and feature engineering</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> EDA visualizations (scatter plots, histograms, box plots, KDE plots, heatmaps)</li>
+                    <li><strong>Scikit-learn:</strong> Train-test splitting, encoding, Random Forest Regressor, Linear Regression, and evaluation metrics</li>
+                    <li><strong>XGBoost:</strong> Gradient boosting regression model</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Risk Assessment &amp; Mitigations</h3>
+                <ul class="findings-list">
+                    <li><strong>Data Quality:</strong> Thorough data cleaning and preprocessing pipeline to handle incomplete or inaccurate data</li>
+                    <li><strong>Overfitting:</strong> Cross-validation and regularization techniques applied to improve generalization</li>
+                    <li><strong>Model Bias:</strong> Dataset balance validated and features evaluated for potential bias</li>
+                    <li><strong>Market Change:</strong> Regular retraining with updated sales data recommended to maintain relevance</li>
+                    <li><strong>External Factors:</strong> Interest rates and macroeconomic indicators identified as future feature candidates</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>The Random Forest model shows high MSE (~812M), indicating room for improvement on high-value or outlier properties</li>
+                    <li>Hyperparameter tuning (GridSearchCV, cross-validation) was identified but not applied in this version</li>
+                    <li>The dataset reflects a specific geographic market (Ames, Iowa) and may not generalize without retraining</li>
+                    <li>External economic factors such as interest rates and inflation are not included in the current feature set</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Feature Engineering:</strong> Explore interaction terms (e.g., <code>GrLivArea × OverallQual</code>) and polynomial transformations to capture non-linear relationships</li>
+                    <li><strong>Model Optimization:</strong> Apply hyperparameter tuning (GridSearchCV with k-fold cross-validation) to Random Forest and XGBoost to further reduce MAE and RMSE</li>
+                    <li><strong>Market Research:</strong> Incorporate neighborhood-level and geographic variables to capture location-based price dynamics</li>
+                    <li><strong>Continuous Evaluation:</strong> Establish a retraining framework that integrates new sales data regularly to keep the model aligned with current market conditions</li>
+                    <li><strong>Outlier Management:</strong> Investigate and handle high-value outliers more carefully to reduce MSE for luxury property predictions</li>
                 </ul>
             </div>
 
