@@ -919,7 +919,7 @@
                 <h3 class="section-heading">Methodology</h3>
 
                 <div class="findings-subsection">
-                    <h4 class="subsection-title">Milestone 1 — Exploratory Data Analysis</h4>
+                    <h4 class="subsection-title">Exploratory Data Analysis</h4>
                     <ul class="findings-list">
                         <li><strong>Gender &amp; Default Rates:</strong> Joint applicants exhibit the lowest default rates, suggesting the importance of exploring marital status and dependent factors</li>
                         <li><strong>Credit Score Distribution:</strong> Similar distributions between defaulting and non-defaulting borrowers — credit scores alone do not fully predict default risk</li>
@@ -930,7 +930,7 @@
                 </div>
 
                 <div class="findings-subsection">
-                    <h4 class="subsection-title">Milestone 2 — Data Preparation</h4>
+                    <h4 class="subsection-title">Data Preparation</h4>
                     <p class="section-content"><strong>Features Dropped</strong> (non-predictive or irrelevant): <code>ID</code>, <code>year</code>, <code>submission_of_application</code>, <code>dtir1</code>, <code>construction_type</code>, <code>Secured_by</code></p>
                     <p class="section-content"><strong>Feature Engineering:</strong></p>
                     <ul class="findings-list">
@@ -949,7 +949,7 @@
                 </div>
 
                 <div class="findings-subsection">
-                    <h4 class="subsection-title">Milestone 3 — Full Encoding</h4>
+                    <h4 class="subsection-title">Full Encoding</h4>
                     <ul class="findings-list">
                         <li>Dropped remaining code-based columns replaced by description equivalents</li>
                         <li>Applied full one-hot encoding across all remaining categorical variables using <code>pd.get_dummies()</code></li>
@@ -958,7 +958,7 @@
                 </div>
 
                 <div class="findings-subsection">
-                    <h4 class="subsection-title">Milestone 4 — Model Building &amp; Evaluation</h4>
+                    <h4 class="subsection-title">Model Building &amp; Evaluation</h4>
                     <ul class="findings-list">
                         <li><strong>Linear Regression:</strong> R² ≈ 0.221 — poor fit; relationship between features and target is non-linear</li>
                         <li><strong>K-Nearest Neighbors (pipeline):</strong> Accuracy 0.886; optimized to 0.888 via GridSearchCV (best n_neighbors = 7)</li>
