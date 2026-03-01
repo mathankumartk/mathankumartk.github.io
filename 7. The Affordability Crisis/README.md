@@ -1,71 +1,134 @@
-# Child Care Cost Analysis in the United States
+# Major Factors Influencing the Cost of Child Care in the United States
+
+A data analysis project examining the economic, demographic, and policy-related variables that drive child care affordability across the U.S., using the **National Database of Childcare Prices** from the U.S. Department of Labor.
+
+---
 
 ## Overview
 
-This project analyzes the major factors influencing the cost of child care in the United States, focusing on economic, demographic, and policy-related variables. Using the "National Database of Childcare Prices," the study aims to provide insights into the affordability of child care and its impact on families and the economy.
+Child care centers play a crucial role in early childhood development while enabling parents to participate in the workforce. Yet affordability remains a major challenge — in over 30 U.S. states, the average cost of infant child care **exceeds in-state public college tuition**. This project identifies and analyzes the key factors behind these costs to surface actionable insights for policymakers, families, and child care providers.
 
-## Introduction
-
-Child care centers are critical for early childhood development, providing a safe environment for children while supporting parents in their pursuit of employment and education. This analysis aims to identify and scrutinize the key factors that shape the affordability of child care services.
+---
 
 ## Dataset
 
-The analysis is based on the "National Database of Childcare Prices," comprising 227 features. The goal is to refine this dataset to a relevant subset of 70 features for deeper examination to explore various influencing factors on median child care prices.
+- **Source:** National Database of Childcare Prices (U.S. Department of Labor)
+- **Original Features:** 227
+- **Features Used:** 70 (refined subset)
+- **Key Variables:** Median household income, male/female median earnings, number of households per county, proportion of single-mother households, dual-income families, poverty rate, unemployment rate, employment rate
 
-## Summary of Analysis
+> **Note:** Median child care price data is unavailable for Indiana and New Mexico and those states were excluded from the analysis.
 
-### Findings
+---
 
-The analysis revealed several key findings regarding affordability and economic and social factors that influence child care costs. 
+## Methodology
 
-- Increasing median household income correlates with rising affordability scores.
-- Job availability affects child care affordability, showcasing a complex relationship between unemployment rates and costs.
-- Disparities in affordability have been noted across different racial and ethnic groups.
+### Affordability Score
 
-## Assumptions
+A custom affordability index was created to standardize comparisons across states and years:
 
-- Prices reported in the dataset reflect actual charges from childcare providers.
-- Data collection methodologies have remained consistent over the years.
-- Child care prices are assumed to be reported truthfully.
+```
+Affordability Score = Median Price of Child Care Cost / Median Household Income
+```
 
-## Items That Need Clarification
+A score above 10% indicates financial strain on families.
 
-- Missing median price data for certain states.
-- Lack of detailed information regarding child care provider characteristics.
-- Specific median income data for sub-groups like single-mother households.
+### High-Level Workflow
 
-## Direction of Story
+1. Data Loading
+2. Data Preparation (standardizing feature names, handling missing values)
+3. Exploratory Data Analysis
+4. Visualization
 
-The analysis focuses on the importance of child care in supporting families and the economy. It addresses rising costs and their impact on affordability, offering a comprehensive report on the findings, implications, and recommendations for stakeholders.
+### Technology Stack
 
-## Call to Action
+| Tool | Purpose |
+|------|---------|
+| Python | Data processing and analysis |
+| pandas | Data manipulation |
+| matplotlib / pyplot | Plotting |
+| seaborn | Statistical visualizations |
+| numpy | Numerical operations |
+| Tableau | Interactive dashboards and maps |
 
-The analysis aims to inform policymakers and families about the need for reforms and support systems to improve child care affordability. It encourages community involvement and advocacy for equitable solutions.
+---
 
-## Medium of Presentation
+## Key Findings
 
-Data visualizations will be created using Tableau and summarized in a PowerPoint presentation and web blog to communicate findings to various stakeholders effectively.
+### Affordability
+- Higher median household income generally correlates with higher affordability scores (families can afford more, but costs are also higher in wealthier states).
+- Affordability slightly improved over time despite rising costs, as household earnings grew proportionally.
+- Significant racial disparities exist — minority groups generally face higher child care costs relative to their income.
+
+### Economic Factors
+- A **positive correlation** exists between median child care prices (ages 6–11) and median household income.
+- Male and female median earnings have grown steadily, but child care costs have risen faster, widening the gap.
+- A **negative correlation** exists between female unemployment rates (ages 20–64) and median prices — higher unemployment is associated with lower child care costs.
+
+### Social Factors
+- **Poverty:** Higher poverty rates are associated with lower child care costs, but reflect limited access to quality care rather than affordability.
+- **Race/Ethnicity:** Groups such as Asian and American Indian populations show a significant negative correlation with median prices, indicating potential higher cost burdens.
+- **Single Mothers:** A weak national correlation between single-mother households and child care costs strengthens significantly in the top 10 states by single-mother population, underscoring regional variation.
+- **Women's Workforce Participation:** States with higher child care costs show lower female labor force participation, highlighting child care as a structural economic barrier.
+
+---
 
 ## Visualizations
 
-Key visualizations will include:
+Delivered via **Tableau Dashboards** and **PowerPoint Presentation**:
 
-1. Affordability by High-Cost States from 2016 to 2023.
-2. Affordability versus Median Income across U.S. states.
-3. Affordability trends segmented by racial ethnicity.
+- Affordability scores for high-cost states (2016–2023)
+- Affordability vs. Median Income — U.S. state map
+- Affordability by racial/ethnic group
+- Affordability scores by state (ranked)
+- Affordability vs. Median Price and Median Earnings over time
+- Affordability vs. Unemployment Rate
 
-## Design Decisions
+> Alaska was omitted from the map visualization for aesthetic consistency, focusing on contiguous U.S. states.
 
-- The Affordability Index is calculated as:  
-  **Affordability Score = Median Price of Child Care Cost / Median Household Income**
-- Specific visualizations were crafted to highlight essential trends and insights effectively.
+---
+
+## Deliverables
+
+| Medium | Audience | Focus Area |
+|--------|----------|------------|
+| Tableau Dashboard | Policymakers, Government Officials, Child Care Organizations | Affordability (Affordability Score vs. Median Income) |
+| PowerPoint Presentation | Policymakers, Parents/Guardians | Economic Factors (Median Income, Labor Force Participation, Employment Rate) |
+| Web Blog | Parents/Guardians, General Public | Social Factors (Race, Poverty, Single Mothers, Women's Workforce Engagement) |
+
+---
 
 ## Ethical Considerations
 
-- Ensuring no bias in the data collection process.
-- Maintaining privacy by excluding Personally Identifiable Information (PII).
+- No PII (Personally Identifiable Information) exists in the dataset — no anonymization required.
+- Data was acquired from a trusted government source (U.S. Department of Labor) and is not used for commercial purposes.
+- No changes were made to the underlying data beyond omitting Indiana and New Mexico (missing child care price data) and standard technical transformations (feature renaming, missing value handling).
+- Bias considerations were reviewed to ensure no underrepresentation of regions or provider types.
 
-## Lessons Learned
+---
 
-- Future research efforts will focus on more specific topics for in-depth analysis.
-- Exploring the socio-economic factors that influence child care costs has been an enriching experience.
+## Assumptions
+
+- Prices in the dataset accurately reflect actual charges from child care providers at the time of data collection.
+- Data collection methodology was consistent across years, allowing for valid temporal comparisons.
+- Median prices are used over mean prices to reduce the effect of skewed distributions.
+
+---
+
+## Recommendations
+
+| Area | Recommendation |
+|------|---------------|
+| **Subsidies** | Design income-based child care subsidies targeting low- and middle-income families |
+| **Data Collection** | Expand data collection to include provider size, quality ratings, and staff qualifications |
+| **Workforce** | Invest in training programs for child care workers to improve quality and attract professionals |
+| **Policy** | Advocate for comprehensive family leave and flexible work policies |
+| **Communication** | Improve outreach to ensure families are aware of available subsidies and resources |
+
+---
+
+## References
+
+Hardy, K. (2025, March 9). *Costs of child care now outpace college tuition in 38 states, analysis finds*. Iowa Capital Dispatch. https://iowacapitaldispatch.com/2025/03/09/costs-of-child-care-now-outpace-college-tuition-in-38-states-analysis-finds/
+
+National Database of Childcare Prices. U.S. Department of Labor. https://www.dol.gov/agencies/wb/topics/childcare/ndcp
