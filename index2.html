@@ -87,7 +87,9 @@
                         <img src="social_progress.jpg" alt="Unveiling the Social Progress">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Unveiling the Social Progress</h3>
+                        <a href="#project_4" class="project-title-link">
+                            <h3 class="project-title">Unveiling the Social Progress</h3>
+                        </a>
                         <p class="project-description">The primary objective of this project is to analyze the relationships between crime rates, corruption perceptions, 
                             and social progress indices across various countries to identify socio-economic patterns and insights that may 
                             influence policy-making and development strategies.
@@ -644,6 +646,185 @@
                     <li>Explore non-linear models such as Random Forest or Gradient Boosting to better capture complex relationships between features and rent</li>
                     <li>Expand the dataset to include diverse geographies for broader applicability and cross-market comparison</li>
                     <li>Apply clustering techniques to segment rental markets by price tier and identify affordability gaps by region</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project #4 Detail Section -->
+    <section id="project_4" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Unveiling the Social Progress: Socio-Economic Dynamics Across Nations</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/4.%20Unveiling%20the%20Social%20Progress" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    This project analyzes the relationships between crime rates, corruption perceptions, social progress indices, 
+                    and economic indicators across various countries to identify socio-economic patterns and insights that may 
+                    influence policy-making and development strategies. Data was sourced from three distinct channels — a flat file, 
+                    web scraping, and a public API — and integrated into a unified SQLite database for cross-dataset analysis and visualization.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Objectives</h3>
+                <ul class="findings-list">
+                    <li>Analyze the relationship between GDP and Social Progress Index across countries</li>
+                    <li>Examine the correlation between inflation and key economic indicators</li>
+                    <li>Study the interplay between crime rates, corruption perception, and social progress</li>
+                    <li>Identify the impact of inflation on health, wellness, and safety indices</li>
+                    <li>Explore the combined role of social progress and crime index in a country's economic standing</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Datasets</h3>
+                <p class="section-content">Three datasets were collected, cleaned, and integrated from distinct sources:</p>
+                <ul class="findings-list">
+                    <li><strong>Crime &amp; Corruption Perception Index (Flat File):</strong> Country-level crime index scores and corruption perception indices sourced from World Population Review and Numbeo</li>
+                    <li><strong>Social Progress Index (Web Scraping):</strong> Country-level social progress scores compiled by the Social Progress Imperative, including health, sanitation, safety, and environmental indicators — scraped from Wikipedia</li>
+                    <li><strong>Economic Indices (World Bank API):</strong> GDP, GDP growth rate, inflation, and goods &amp; services export values by country (2023)</li>
+                </ul>
+                <p class="section-content">All three datasets were cleaned, standardized to ISO country name format, and loaded into a unified SQLite database (<code>socio_economic_dynamics.sqlite</code>) for integrated analysis.</p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">1. Data Collection &amp; Extraction</h4>
+                    <ul class="findings-list">
+                        <li><strong>Flat File:</strong> Crime and Corruption Perception data imported using <code>pandas.read_csv()</code></li>
+                        <li><strong>Web Scraping:</strong> Social Progress Index scraped from Wikipedia using <code>BeautifulSoup</code> and parsed into a structured DataFrame</li>
+                        <li><strong>API:</strong> Economic indices fetched from the World Bank API using the <code>requests</code> library</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">2. Data Cleaning &amp; Preparation</h4>
+                    <ul class="findings-list">
+                        <li>Validated and removed duplicate records across all three datasets</li>
+                        <li>Handled NaN values — countries with missing key values were excluded from the Crime dataset; Social Progress and Economic datasets had no missing values</li>
+                        <li>Corrected data type inconsistencies across numerical and categorical fields</li>
+                        <li>Standardized country names to ISO format using the <code>pycountry</code> library to enable accurate cross-dataset joining</li>
+                        <li>Examined outliers and determined them to be natural variations — retained in the dataset</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">3. Data Integration</h4>
+                    <ul class="findings-list">
+                        <li>All three cleaned datasets were loaded into a SQLite database using <code>SQLAlchemy</code></li>
+                        <li>A final combined DataFrame was created by joining all three tables on the standardized country name field</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">4. Exploratory Data Analysis &amp; Visualizations</h4>
+                    <ul class="findings-list">
+                        <li><strong>Scatter Plot 1 — GDP vs. Social Progress Score:</strong> Compared across top 10 and bottom 10 GDP countries using Economic Indices and Social Progress datasets</li>
+                        <li><strong>Scatter Plot 2 — GDP vs. Inflation:</strong> Compared across top 10 and bottom 10 GDP countries using Economic Indices dataset</li>
+                        <li><strong>Line Plot — Social Progress vs. Crime Index:</strong> Studied the correlation between Social Progress Score and Crime Index Score across countries</li>
+                        <li><strong>Column Bar Chart — Inflation vs. Health &amp; Safety:</strong> Studied the impact of inflation on Health &amp; Wellness and Safety Index across top/bottom 10 inflation countries using all three datasets</li>
+                        <li><strong>Bubble Chart — GDP, Social Progress &amp; Crime:</strong> Explored the combined role of Social Progress and Crime Index in a country's GDP value using all three datasets</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+                <ul class="findings-list">
+                    <li>Countries with higher GDP values generally exhibit higher Social Progress scores, though the relationship is not perfectly linear — some high-GDP nations still underperform on social metrics</li>
+                    <li>High inflation countries tend to show weaker safety and health &amp; wellness indices, suggesting that economic instability has measurable social consequences</li>
+                    <li>Crime Index and Social Progress Score show an inverse relationship — countries with higher crime indices tend to score lower on social progress measures</li>
+                    <li>The bubble chart reveals that the combination of high social progress and low crime index is strongly associated with higher GDP, reinforcing the multi-dimensional nature of national prosperity</li>
+                    <li>Approximately 80% of countries in the dataset have Social Progress Scores that cluster in a mid-range band, with outlier nations at both extremes driven by unique geopolitical and economic circumstances</li>
+                </ul>
+            </div>
+            <!-- Charts for Evaluating Housing Affordability -->
+            <div class="chart-container">
+                <img src="Z_4_Chart1.png" alt="Workforce Impact Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_4_Chart2.png" alt="Workforce Impact Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_4_Chart3.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_4_Chart4.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_4_Chart5.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation, cleaning, and transformation</li>
+                    <li><strong>BeautifulSoup:</strong> Web scraping of Social Progress Index from Wikipedia</li>
+                    <li><strong>Requests:</strong> World Bank API data retrieval</li>
+                    <li><strong>pycountry:</strong> ISO country name standardization for cross-dataset joining</li>
+                    <li><strong>SQLAlchemy:</strong> SQLite database creation and data loading</li>
+                    <li><strong>SQLite:</strong> Unified database storage for all three datasets</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> Data visualization (scatter plots, line plots, bar charts, bubble charts)</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Ethical Considerations</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Data Licensing &amp; Legal Compliance</h4>
+                    <ul class="findings-list">
+                        <li><strong>Crime &amp; Corruption Dataset:</strong> Terms of Use from World Population Review and Numbeo permit free use for personal, academic, and journalistic purposes — not used for commercial purposes</li>
+                        <li><strong>Social Progress Dataset:</strong> Wikipedia content is licensed under Creative Commons Attribution-ShareAlike 4.0 International License, allowing use with proper attribution</li>
+                        <li><strong>Economic Dataset:</strong> World Bank data is provided under Creative Commons Attribution 4.0 International License, permitting sharing and adaptation with attribution</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Ethical Risks &amp; Mitigations</h4>
+                    <ul class="findings-list">
+                        <li>Crime reporting standards vary significantly across countries — comparisons should be interpreted with awareness that reported crime data does not uniformly reflect actual crime rates</li>
+                        <li>Social progress indices reflect culturally specific values; different societies prioritize different indicators of progress</li>
+                        <li>Economic analyses should highlight and address disparities rather than perpetuate global inequalities; local researchers and stakeholders should be involved in interpretation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>Countries with missing Crime Index values were excluded from the analysis, limiting the scope of crime-based comparisons</li>
+                    <li>Missing values in the Crime dataset were filled using mean imputation for time-series data, which may reduce accuracy for specific countries</li>
+                    <li>Visualizations were produced using filtered subsets — findings reflect subsets and should not be generalized to the full global dataset without further validation</li>
+                    <li>The dataset represents a single year (2023) of economic data — longitudinal trends are not captured</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Future Work</h3>
+                <ul class="opportunities-list">
+                    <li>Expand the analysis to include longitudinal data across multiple years to identify trends and trajectories in social progress and economic development</li>
+                    <li>Incorporate additional social indicators such as education quality, gender equality, and environmental sustainability</li>
+                    <li>Apply clustering techniques (e.g., K-Means) to group countries by socio-economic profile and identify development archetypes</li>
+                    <li>Build predictive models to forecast social progress scores based on economic indicators</li>
+                    <li>Extend geographic coverage by resolving missing country data through alternative data sources</li>
                 </ul>
             </div>
 
