@@ -129,7 +129,9 @@
                         <img src="childcare_affordability.jpg" alt="The Childcare Affordability Crisis">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">The Childcare Affordability Crisis</h3>
+                        <a href="#project_7" class="project-title-link">
+                            <h3 class="project-title">The Childcare Affordability Crisis</h3>
+                        </a>
                         <p class="project-description">This comprehensive data analysis project investigates the critical factors affecting child care affordability 
                             across the United States, addressing a pressing challenge that impacts family stability, workforce participation, 
                             and economic growth.
@@ -1216,6 +1218,220 @@
                     <li><strong>Market Research:</strong> Incorporate neighborhood-level and geographic variables to capture location-based price dynamics</li>
                     <li><strong>Continuous Evaluation:</strong> Establish a retraining framework that integrates new sales data regularly to keep the model aligned with current market conditions</li>
                     <li><strong>Outlier Management:</strong> Investigate and handle high-value outliers more carefully to reduce MSE for luxury property predictions</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project #7 Detail Section -->
+    <section id="project_7" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Major Factors Influencing the Cost of Child Care in the United States</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/7.%20The%20Affordability%20Crisis" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    This project examines the economic, demographic, and policy-related variables that drive child care affordability 
+                    across the United States, using the National Database of Childcare Prices from the U.S. Department of Labor. 
+                    Child care centers play a crucial role in early childhood development while enabling parents to participate in 
+                    the workforce. Yet affordability remains a major challenge — in over 30 U.S. states, the average cost of infant 
+                    child care exceeds in-state public college tuition. The project surfaces actionable insights for policymakers, 
+                    families, and child care providers through multi-medium analysis and visualization.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> National Database of Childcare Prices — U.S. Department of Labor</li>
+                    <li><strong>Original Features:</strong> 227</li>
+                    <li><strong>Features Used:</strong> 70 (refined subset)</li>
+                    <li><strong>Key Variables:</strong> Median household income, male/female median earnings, number of households per county, proportion of single-mother households, dual-income families, poverty rate, unemployment rate, employment rate</li>
+                </ul>
+                <p class="section-content"><strong>Note:</strong> Median child care price data is unavailable for Indiana and New Mexico; those states were excluded from the analysis.</p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Affordability Score</h4>
+                    <p class="section-content">
+                        A custom affordability index was created to standardize comparisons across states and years:
+                    </p>
+                    <p class="section-content"><strong>Affordability Score = Median Price of Child Care Cost / Median Household Income</strong></p>
+                    <p class="section-content">A score above 10% indicates financial strain on families.</p>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">High-Level Workflow</h4>
+                    <ol class="research-list">
+                        <li>Data Loading</li>
+                        <li>Data Preparation — standardizing feature names, handling missing values</li>
+                        <li>Exploratory Data Analysis</li>
+                        <li>Visualization across multiple media (Tableau, PowerPoint, Web Blog)</li>
+                    </ol>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Technology Stack</h4>
+                    <ul class="findings-list">
+                        <li><strong>Python:</strong> Data processing and analysis</li>
+                        <li><strong>pandas:</strong> Data manipulation</li>
+                        <li><strong>matplotlib / pyplot &amp; seaborn:</strong> Statistical visualizations and plotting</li>
+                        <li><strong>numpy:</strong> Numerical operations</li>
+                        <li><strong>Tableau:</strong> Interactive dashboards and geographic maps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Affordability</h4>
+                    <ul class="findings-list">
+                        <li>Higher median household income generally correlates with higher affordability scores — families can afford more, but costs are also higher in wealthier states</li>
+                        <li>Affordability slightly improved over time despite rising costs, as household earnings grew proportionally</li>
+                        <li>Significant racial disparities exist — minority groups generally face higher child care costs relative to their income</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Economic Factors</h4>
+                    <ul class="findings-list">
+                        <li>A positive correlation exists between median child care prices (ages 6–11) and median household income</li>
+                        <li>Male and female median earnings have grown steadily, but child care costs have risen faster, widening the gap</li>
+                        <li>A negative correlation exists between female unemployment rates (ages 20–64) and median prices — higher unemployment is associated with lower child care costs</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Social Factors</h4>
+                    <ul class="findings-list">
+                        <li><strong>Poverty:</strong> Higher poverty rates are associated with lower child care costs, but reflect limited access to quality care rather than true affordability</li>
+                        <li><strong>Race/Ethnicity:</strong> Asian and American Indian populations show a significant negative correlation with median prices, indicating potential higher cost burdens</li>
+                        <li><strong>Single Mothers:</strong> A weak national correlation between single-mother households and child care costs strengthens significantly in the top 10 states by single-mother population</li>
+                        <li><strong>Women's Workforce Participation:</strong> States with higher child care costs show lower female labor force participation, highlighting child care as a structural economic barrier</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Charts for Child Care Affordability -->
+            <div class="chart-container">
+                <img src="Z_7_Chart1.png" alt="Child Care Affordability Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart2.png" alt="Child Care Affordability Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart3.png" alt="Child Care Affordability Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart4.png" alt="Child Care Affordability Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart5.png" alt="Child Care Affordability Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart6.png" alt="Child Care Affordability Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart7.png" alt="Child Care Affordability Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart8.png" alt="Child Care Affordability Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart9.png" alt="Child Care Affordability Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart10.png" alt="Child Care Affordability Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart11.png" alt="Child Care Affordability Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart12.png" alt="Child Care Affordability Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart13.png" alt="Child Care Affordability Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_7_Chart14.png" alt="Child Care Affordability Chart 4" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Visualizations &amp; Deliverables</h3>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Tableau Dashboards — Audience: Policymakers, Government Officials, Child Care Organizations</h4>
+                    <ul class="findings-list">
+                        <li>Affordability scores for high-cost states (2016–2023) — general downward trend indicating worsening affordability in California, Hawaii, Massachusetts, and New York</li>
+                        <li>Affordability vs. Median Income — U.S. state map showing regional disparities</li>
+                        <li>Affordability by racial/ethnic group across states</li>
+                        <li>Affordability scores by state ranked against median benchmark</li>
+                        <li>Affordability vs. Median Price and Median Earnings over time</li>
+                        <li>Affordability vs. Unemployment Rate by state</li>
+                    </ul>
+                </div>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">PowerPoint Presentation — Audience: Policymakers, Parents/Guardians</h4>
+                    <ul class="findings-list">
+                        <li>Focus areas: Median Income, Labor Force Participation, Employment Rate</li>
+                        <li>Highlights that in Nebraska, infant care costs $5,091 more per year than in-state public college tuition</li>
+                        <li>For new parents in some states, child care exceeds 24% of household income</li>
+                    </ul>
+                </div>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Web Blog — Audience: Parents/Guardians, General Public</h4>
+                    <ul class="findings-list">
+                        <li>Focus: Social factors including racial disparities, poverty impact, single-mother households, and women's workforce engagement</li>
+                        <li>Discusses cultural shifts and government policy as tools to bridge the affordability gap</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Ethical Considerations</h3>
+                <ul class="findings-list">
+                    <li>No PII (Personally Identifiable Information) exists in the dataset — no anonymization required</li>
+                    <li>Data acquired from a trusted government source (U.S. Department of Labor) and not used for commercial purposes</li>
+                    <li>No changes made to the underlying data beyond omitting Indiana and New Mexico and standard technical transformations</li>
+                    <li>Bias considerations reviewed to ensure no underrepresentation of regions or provider types</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>Median child care price data is unavailable for Indiana and New Mexico, limiting national completeness</li>
+                    <li>Additional provider-level details (size, quality ratings, staff qualifications) are not available in the dataset</li>
+                    <li>Median income and earnings data for specific population groups such as single-mother households is not available at a granular level</li>
+                    <li>Alaska was omitted from the map visualization for aesthetic consistency, focusing on contiguous U.S. states</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Subsidies:</strong> Design income-based child care subsidies targeting low- and middle-income families to close the affordability gap</li>
+                    <li><strong>Data Collection:</strong> Expand data collection to include provider size, quality ratings, and staff qualifications for richer analysis</li>
+                    <li><strong>Workforce:</strong> Invest in training programs for child care workers to improve service quality and attract more professionals into the field</li>
+                    <li><strong>Policy:</strong> Advocate for comprehensive family leave policies and flexible work arrangements that reduce financial strain on parents</li>
+                    <li><strong>Communication:</strong> Improve outreach to ensure families are informed about available subsidies, resources, and child care programs</li>
+                    <li><strong>Employer Engagement:</strong> Encourage employers to adopt remote work and flexible hours to help parents balance work and child care responsibilities</li>
                 </ul>
             </div>
 
