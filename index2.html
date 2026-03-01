@@ -158,7 +158,9 @@
                         <img src="movie_performance.jpg" alt="Exploring Trends in Movie Performance">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Exploring Trends in Movie Performance</h3>
+                        <a href="#project_9" class="project-title-link">
+                            <h3 class="project-title">Exploring Trends in Movie Performance</h3>
+                        </a>
                         <p class="project-description">The objective of this project aims to build and evaluate machine learning models
                              that predict whether movies will receive high ratings (above 7.0).</p>
                     </div>
@@ -1684,6 +1686,262 @@
                     <li><strong>Data Collection:</strong> Establish live data feeds and explore options to incorporate records for Alaska</li>
                     <li><strong>Continuous Validation:</strong> Ongoing model validation with post-2023 data is essential to adapt to evolving trends in vehicle technology and driving behavior</li>
                     <li><strong>Real-Time Deployment:</strong> Integrate into intelligent transportation systems to enable real-time severity forecasting, allowing emergency services to preposition resources and optimize dispatch priorities</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project #9 Detail Section -->
+    <section id="project_9" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Exploring Trends in Movie Performance: A Machine Learning Classification Approach</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/9.%20Exploring%20Trends%20in%20Movie%20Performance" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    A supervised binary classification project that predicts whether movies will receive high ratings (above 7.0) 
+                    using a dataset of 434,671 films. The project applies Logistic Regression, Random Forest, and XGBoost with 
+                    Bayesian optimization to help filmmakers, studios, and streaming platforms make data-driven decisions about 
+                    content development and investment.
+                </p>
+                <p class="section-content">
+                    The average Hollywood production costs approximately <strong>$100 million</strong> when combining production (~$65M) 
+                    and marketing (~$35M), with blockbusters averaging <strong>$200 million</strong> per film. Yet analysis of 5,193 
+                    Hollywood films over the past 100 years shows that <strong>only 23% broke even</strong>, with failure rates around 
+                    <strong>80%</strong> in recent decades.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Research Questions</h3>
+                <ol class="research-list">
+                    <li>What movie characteristics most strongly predict high ratings (&gt;7.0)?</li>
+                    <li>How do genre and genre combinations impact critical reception?</li>
+                    <li>How does release timing affect ratings and box office performance?</li>
+                    <li>Does production scale (co-productions, country diversity, language) influence success?</li>
+                    <li>Which classification algorithms best predict high-rated movies to enable actionable business recommendations?</li>
+                </ol>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> Kaggle — TMDB + IMDb Merged Movies Dataset</li>
+                    <li><strong>Size:</strong> ~434,671 unique movie records, 29 features each</li>
+                    <li><strong>Data Sources:</strong> The Movie Database (TMDB) and Internet Movie Database (IMDb)</li>
+                    <li><strong>Target Variable:</strong> <code>High Rating</code> — binary: Class 1 (rating &gt; 7.0) = High-Rated; Class 0 (rating ≤ 7.0) = Low-Rated</li>
+                </ul>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Feature Groups</h4>
+                    <ul class="findings-list">
+                        <li><strong>Financial:</strong> Budget (USD), Revenue (USD)</li>
+                        <li><strong>Temporal:</strong> Release date, year, decade (engineered), production status</li>
+                        <li><strong>Production:</strong> Production companies, countries, co-production flag, <code>is_US_produced</code></li>
+                        <li><strong>Content:</strong> Genre binary columns (19 genres), genre count, keywords, overview, tagline</li>
+                        <li><strong>Language:</strong> Original language, spoken languages count, <code>has_english_language</code> flag</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Data Preprocessing</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Missing Value Handling</h4>
+                    <ul class="findings-list">
+                        <li>Records missing <code>release_date</code>, <code>genres</code>, <code>production_companies</code>, <code>production_countries</code>, <code>directors</code>, <code>writers</code>, or <code>cast</code> → deleted</li>
+                        <li><code>spoken_languages</code> → filled using <code>original_language</code> via conditional imputation</li>
+                        <li>Text fields (<code>homepage</code>, <code>overview</code>, <code>tagline</code>, <code>keywords</code>) → filled with "no value available"</li>
+                        <li>Non-essential columns (<code>backdrop_path</code>, <code>poster_path</code>, <code>id</code>, <code>tconst</code>) → dropped</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Encoding &amp; Feature Engineering</h4>
+                    <ul class="findings-list">
+                        <li><strong>One-hot encoding:</strong> <code>status</code> field; 19 genre binary columns expanded from <code>genres</code></li>
+                        <li><strong>Binary encoding:</strong> <code>adult</code> feature (Boolean → numerical)</li>
+                        <li><code>genre_count</code> — number of genres per film</li>
+                        <li><code>co_production</code> — binary flag (1 if multiple production companies)</li>
+                        <li><code>production_countries_count</code>, <code>spoken_languages_count</code>, <code>is_us_produced</code>, <code>has_english_language</code></li>
+                        <li><code>year</code> and <code>decade</code> extracted from <code>release_date</code>; all column names standardized to lowercase</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Exploratory Data Analysis</h4>
+                    <ul class="findings-list">
+                        <li><strong>Univariate:</strong> Histograms and boxplots for budget, revenue, and ratings distributions</li>
+                        <li><strong>Bivariate/Multivariate:</strong> Correlation matrices and scatter plots across key variables</li>
+                        <li><strong>Temporal:</strong> Decade-grouped boxplots revealing shifts in revenue and audience preferences over time</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology &amp; Model Results</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Imbalanced Dataset Results</h4>
+                    <ul class="findings-list">
+                        <li><strong>Logistic Regression:</strong> Accuracy 69.41%</li>
+                        <li><strong>Gradient Boosting:</strong> Accuracy 78.11%</li>
+                        <li><strong>Random Forest (Best — Imbalanced):</strong> Accuracy 83.55%</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">After SMOTE Class Balancing</h4>
+                    <p class="section-content">
+                        The target variable showed a 60:40 imbalance (low-rated vs. high-rated). SMOTE was applied to the training 
+                        set after the 80/20 split to achieve a balanced 50:50 training distribution.
+                    </p>
+                    <ul class="findings-list">
+                        <li><strong>Logistic Regression:</strong> Accuracy 69.31% — minimal change, insensitive to class imbalance</li>
+                        <li><strong>Gradient Boosting:</strong> Accuracy 79.07% (+1.23%)</li>
+                        <li><strong>Random Forest:</strong> Accuracy 84.48% (+1.11%)</li>
+                        <li><strong>XGBoost + Bayesian Optimization (Best Overall):</strong> Accuracy 88.42% (+4.87pp over best baseline)</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Hyperparameter Optimization (XGBoost — Bayesian Optimization)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Search space:</strong> n_estimators (100–300), max_depth (3–10), learning_rate (0.01–0.1), subsample (0.6–1.0), colsample_bytree (0.6–1.0)</li>
+                        <li><strong>25 iterations</strong> (5 random explorations + 20 optimization steps)</li>
+                        <li><strong>Optimal values:</strong> n_estimators=176, max_depth=10, learning_rate=0.0828, subsample=0.8249, colsample_bytree=0.6534</li>
+                        <li><strong>Optimized F1-score: 0.8841</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Best Model Performance — XGBoost (After Bayesian Optimization)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Accuracy:</strong> 88.42% (balanced) / 84.87% (full dataset)</li>
+                        <li><strong>Precision:</strong> 83.65% | <strong>Recall:</strong> 84.87% | <strong>F1-Score:</strong> 83.49%</li>
+                        <li><strong>Class 0 (Low-Rated):</strong> Precision 87%, Recall 90%, F1 0.91</li>
+                        <li><strong>Class 1 (High-Rated):</strong> Precision 90%, Recall 87%, F1 0.88</li>
+                        <li><strong>Confusion Matrix (3,125-sample test set):</strong> 1,403 TN | 157 FP | 205 FN | 1,360 TP</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Most Predictive Features</h4>
+                    <ul class="findings-list">
+                        <li><strong>Vote Count</strong> — higher audience engagement correlates with higher ratings</li>
+                        <li><strong>Revenue &amp; Budget</strong> — financial scale shows modest correlation with critical success</li>
+                        <li><strong>Runtime</strong> — movie length influences audience satisfaction</li>
+                        <li><strong>Budget-to-Revenue Ratio</strong> — engineered feature reflecting production efficiency</li>
+                        <li><strong>Genre Combinations</strong> — Action + Science Fiction + Adventure appear frequently in high-rated films</li>
+                        <li><strong>Production Company &amp; Director</strong> — established creators serve as quality indicators</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Correlation Findings</h4>
+                    <ul class="findings-list">
+                        <li><code>vote_average</code> ↔ <code>average_rating</code>: weak positive correlation (0.143)</li>
+                        <li><code>vote_average</code> ↔ <code>revenue</code>: weak positive correlation (0.143)</li>
+                        <li><code>vote_average</code> ↔ <code>popularity</code>: weak positive correlation (0.107)</li>
+                        <li>High ratings do not directly translate to higher revenue — other factors drive commercial success independently of critical reception</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Charts for Movie Performance -->
+            <div class="chart-container">
+                <img src="Z_9_Chart1.png" alt="Movie Performance Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart2.png" alt="Movie Performance Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart3.png" alt="Movie Performance Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart4.png" alt="Movie Performance Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart5.png" alt="Movie Performance Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart6.png" alt="Movie Performance Chart 6" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart7.png" alt="Movie Performance Chart 7" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_9_Chart8.png" alt="Movie Performance Chart 8" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation, cleaning, and feature engineering</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> EDA visualizations — histograms, boxplots, correlation matrices, scatter plots</li>
+                    <li><strong>Scikit-learn:</strong> Logistic Regression, Random Forest, Gradient Boosting, StandardScaler, evaluation metrics</li>
+                    <li><strong>XGBoost:</strong> Advanced gradient boosting classifier</li>
+                    <li><strong>SMOTE (imbalanced-learn):</strong> Synthetic minority oversampling for class balancing</li>
+                    <li><strong>BayesianOptimization (bayes_opt):</strong> Hyperparameter search and optimization</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Implementation Roadmap</h3>
+                <ul class="findings-list">
+                    <li><strong>Phase 1 — Model Finalization &amp; Validation (1–3 months):</strong> Finalize XGBoost model; retrain on full preprocessed dataset with class weighting/stratified sampling</li>
+                    <li><strong>Phase 2 — Interpretability &amp; Compliance (1–2 months):</strong> Integrate SHAP or LIME for feature importance rankings and individual prediction explanations</li>
+                    <li><strong>Phase 3 — System Integration &amp; Pilot (3–6 months):</strong> Integrate into studio or streaming platform systems; establish continuous monitoring pipelines</li>
+                    <li><strong>Phase 4 — Monitoring &amp; Scaling (Ongoing):</strong> Track model drift, retrain with new release data, scale to additional markets and budget tiers</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Ethical Considerations</h3>
+                <ul class="findings-list">
+                    <li><strong>Representation Bias:</strong> Models trained on historical ratings may undervalue films by underrepresented directors, writers, or casts; regular fairness audits across demographic dimensions are recommended; separate budget-tier models advised to avoid penalizing mid-budget productions</li>
+                    <li><strong>Data Privacy:</strong> Actors, directors, and writers did not explicitly consent to commercial predictive modeling; aggregated patterns should be used rather than individual-level predictions; names anonymized in R&amp;D contexts</li>
+                    <li><strong>Rating Manipulation:</strong> IMDb/TMDB ratings can be subject to artificial inflation or review bombing; model predictions reflect statistical patterns and require human oversight</li>
+                    <li><strong>Economic Inequality:</strong> Budget-rating correlations risk eliminating mid-budget filmmaking; industry guilds and unions should be engaged when implementing algorithmic decision tools</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>Class imbalance (~79.5% low-rated vs. ~20.5% high-rated in raw data) biases baseline model predictions toward the majority class</li>
+                    <li>Historical training data may not capture evolving industry dynamics — patterns from the 1980s may be irrelevant for 2025 productions</li>
+                    <li>Binary classification (high vs. not high) loses rating granularity; the 7.0 threshold is somewhat arbitrary</li>
+                    <li>XGBoost is a black-box model, limiting interpretability for non-technical stakeholders</li>
+                    <li>Computational complexity of Bayesian optimization poses practical constraints at scale</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations &amp; Future Work</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Content Development Support:</strong> Use predictive models to assess scripts at the greenlight stage based on genre, budget, and production characteristics</li>
+                    <li><strong>Recommendation Systems:</strong> Integrate findings into streaming platform personalization to align content suggestions with individual viewer preferences</li>
+                    <li><strong>Genre-Specific Models:</strong> Develop separate models per genre to capture audience preference variation across categories</li>
+                    <li><strong>Social Media Integration:</strong> Incorporate social media metrics and audience demographics as additional predictive signals</li>
+                    <li><strong>Continuous Retraining:</strong> Schedule regular model updates with new release data to stay aligned with current industry dynamics</li>
                 </ul>
             </div>
 
