@@ -4,24 +4,6 @@
 
 This project analyzes the major factors influencing the cost of child care in the United States, focusing on economic, demographic, and policy-related variables. Using the "National Database of Childcare Prices," the study aims to provide insights into the affordability of child care and its impact on families and the economy.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Dataset](#dataset)
-- [Summary of Analysis](#summary-of-analysis)
-  - [Findings](#findings)
-- [Assumptions](#assumptions)
-- [Items That Need Clarification](#items-that-need-clarification)
-- [Direction of Story](#direction-of-story)
-- [Call to Action](#call-to-action)
-- [Medium of Presentation](#medium-of-presentation)
-- [Visualizations](#visualizations)
-- [Design Decisions](#design-decisions)
-- [Ethical Considerations](#ethical-considerations)
-- [Lessons Learned](#lessons-learned)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Introduction
 
 Child care centers are critical for early childhood development, providing a safe environment for children while supporting parents in their pursuit of employment and education. This analysis aims to identify and scrutinize the key factors that shape the affordability of child care services.
