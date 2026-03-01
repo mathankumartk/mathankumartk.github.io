@@ -102,7 +102,9 @@
                         <img src="loan_default.jpg" alt="Assessing Loan Default Risks">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Assessing Loan Default Risks</h3>
+                        <a href="#project_5" class="project-title-link">
+                            <h3 class="project-title">Assessing Loan Default Risks</h3>
+                        </a>
                         <p class="project-description">The objective of this project is to develop a comprehensive predictive model that identifies the likelihood of 
                             loan defaults based on various borrower characteristics.</p>
                     </div>
@@ -825,6 +827,192 @@
                     <li>Apply clustering techniques (e.g., K-Means) to group countries by socio-economic profile and identify development archetypes</li>
                     <li>Build predictive models to forecast social progress scores based on economic indicators</li>
                     <li>Extend geographic coverage by resolving missing country data through alternative data sources</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project #5 Detail Section -->
+    <section id="project_5" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Assessing Loan Default Risks: Predicting Borrower Behavior Using Machine Learning</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/5.%20Assessing%20Loan%20Default%20Risks" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    This project develops a comprehensive machine learning pipeline to predict the likelihood of loan defaults 
+                    based on borrower characteristics and loan attributes. Using a dataset of approximately 148,000 mortgage 
+                    loan records sourced from Kaggle, the study applies extensive data preprocessing, exploratory data analysis, 
+                    feature engineering, and multi-model evaluation to identify the most reliable classifier for predicting loan 
+                    default status — ultimately equipping financial institutions with the insights needed to make informed, 
+                    risk-aware lending decisions.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Problem Statement</h3>
+                <p class="section-content">
+                    Loan defaults pose a significant financial risk to lending institutions. Traditional credit assessment 
+                    approaches relying primarily on credit scores often fail to capture the full spectrum of factors influencing 
+                    repayment behavior. This project builds a predictive binary classification model to distinguish between loans 
+                    likely to default (1) and those that will not (0), enabling lenders to:
+                </p>
+                <ul class="findings-list">
+                    <li>Identify high-risk borrowers before loan approval</li>
+                    <li>Tailor lending terms and risk mitigation strategies</li>
+                    <li>Reduce financial losses and improve portfolio quality</li>
+                    <li>Streamline and improve the efficiency of the loan approval process</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> Kaggle — Mortgage Loan Default - Data Preprocessing</li>
+                    <li><strong>File:</strong> <code>Loan_Default.csv</code></li>
+                    <li><strong>Size:</strong> ~148,000 records, 34 columns (33 features + 1 target variable)</li>
+                    <li><strong>Target Variable:</strong> <code>Status</code> — Binary classification (1 = Default, 0 = No Default)</li>
+                </ul>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Key Features</h4>
+                    <ul class="findings-list">
+                        <li><strong>Credit_Score:</strong> Borrower's creditworthiness score</li>
+                        <li><strong>rate_of_interest:</strong> Loan interest rate — higher rates may increase default risk</li>
+                        <li><strong>approv_in_adv:</strong> Pre-approval status — indicates initial creditworthiness assessment</li>
+                        <li><strong>loan_amount:</strong> Total loan amount — larger amounts associated with higher default risk</li>
+                        <li><strong>loan_purpose:</strong> Purpose of the loan (home purchase, improvement, refinancing, other)</li>
+                        <li><strong>Gender:</strong> Borrower gender / applicant type (individual, joint)</li>
+                        <li><strong>Income:</strong> Borrower income level</li>
+                        <li><strong>term:</strong> Loan repayment term</li>
+                        <li><strong>property_value:</strong> Estimated property value</li>
+                        <li><strong>Status:</strong> Target variable — 1 = Default, 0 = No Default</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Milestone 1 — Exploratory Data Analysis</h4>
+                    <ul class="findings-list">
+                        <li><strong>Gender &amp; Default Rates:</strong> Joint applicants exhibit the lowest default rates, suggesting the importance of exploring marital status and dependent factors</li>
+                        <li><strong>Credit Score Distribution:</strong> Similar distributions between defaulting and non-defaulting borrowers — credit scores alone do not fully predict default risk</li>
+                        <li><strong>Interest Rate Influence:</strong> Defaulted loans have slightly higher median interest rates; non-defaulting loans contain high-interest outliers requiring careful management</li>
+                        <li><strong>Loan Amount Distribution:</strong> Default cases show greater variability and higher median loan amounts — larger loans carry higher default risk</li>
+                        <li><strong>Pre-Approval Status:</strong> Loans with pre-approval show significantly lower default rates, confirming a strong correlation with reduced default risk</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Milestone 2 — Data Preparation</h4>
+                    <p class="section-content"><strong>Features Dropped</strong> (non-predictive or irrelevant): <code>ID</code>, <code>year</code>, <code>submission_of_application</code>, <code>dtir1</code>, <code>construction_type</code>, <code>Secured_by</code></p>
+                    <p class="section-content"><strong>Feature Engineering:</strong></p>
+                    <ul class="findings-list">
+                        <li><strong>Interest Category:</strong> Binned <code>rate_of_interest</code> into 0.5% intervals (0–8%) for risk segmentation</li>
+                        <li><strong>Loan Descriptions:</strong> Mapped coded Loan Type, Purpose, and Occupancy Type values to descriptive labels using CFPB reference documentation</li>
+                        <li><strong>Monthly EMI:</strong> Calculated equated monthly installment from loan amount, interest rate, and term</li>
+                        <li><strong>Loan Amount Risk:</strong> Categorized loans as <code>"high"</code> (&gt; $499,999) or <code>"low"</code> risk</li>
+                    </ul>
+                    <p class="section-content"><strong>Missing Value Strategy:</strong></p>
+                    <ul class="findings-list">
+                        <li>Fill with <code>"unknown"</code>: Loan Limit, Pre-Approval, Age, Negative Amortization (avoids skewed categorical interpretation)</li>
+                        <li>Fill with mode: Loan Purpose (preserves overall distribution)</li>
+                        <li>Fill with mean: Rate of Interest, Interest Rate Spread, Income (retains central tendency)</li>
+                        <li>Drop rows: Term, Property Value (essential fields — missing values degrade model quality)</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Milestone 3 — Full Encoding</h4>
+                    <ul class="findings-list">
+                        <li>Dropped remaining code-based columns replaced by description equivalents</li>
+                        <li>Applied full one-hot encoding across all remaining categorical variables using <code>pd.get_dummies()</code></li>
+                        <li>Treated <code>Age</code> and <code>Total Units</code> as categorical due to their discrete, non-continuous nature</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Milestone 4 — Model Building &amp; Evaluation</h4>
+                    <ul class="findings-list">
+                        <li><strong>Linear Regression:</strong> R² ≈ 0.221 — poor fit; relationship between features and target is non-linear</li>
+                        <li><strong>K-Nearest Neighbors (pipeline):</strong> Accuracy 0.886; optimized to 0.888 via GridSearchCV (best n_neighbors = 7)</li>
+                        <li><strong>Logistic Regression:</strong> Accuracy 0.889, Precision 0.884, Recall 0.889, F1 0.886</li>
+                        <li><strong>Decision Tree:</strong> Accuracy 0.999, Precision 0.999, Recall 0.999, F1 0.999</li>
+                        <li><strong>Random Forest (Best Model):</strong> Accuracy 1.000, Precision 1.000, Recall 1.000, F1 1.000 — perfect classification with no overfitting confirmed (train accuracy = test accuracy = 1.000)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+                <ul class="findings-list">
+                    <li><strong>Random Forest</strong> is the best-performing model, achieving 100% accuracy on both training and test sets with no signs of overfitting</li>
+                    <li><strong>Pre-approval status</strong> is one of the strongest indicators of loan repayment reliability</li>
+                    <li><strong>Loan amount</strong> is positively correlated with default risk — larger loans are more likely to default</li>
+                    <li><strong>Joint applicants</strong> show the lowest default rates across all gender/applicant categories</li>
+                    <li><strong>Credit score alone</strong> is insufficient as a default predictor — a multi-feature approach significantly improves accuracy</li>
+                    <li><strong>Interest rate</strong> shows a modest positive relationship with default — loans with slightly higher rates are marginally more likely to default</li>
+                </ul>
+            </div>
+            <!-- Charts for Assessing Loan Default -->
+            <div class="chart-container">
+                <img src="Z_5_Chart1.png" alt="Workforce Impact Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_5_Chart2.png" alt="Workforce Impact Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_5_Chart3.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_5_Chart4.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_5_Chart5.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation and feature engineering</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> EDA visualizations (bar charts, box plots, violin plots)</li>
+                    <li><strong>Scikit-learn:</strong> Model building, pipelines, GridSearchCV, and evaluation metrics</li>
+                    <li><strong>Models Used:</strong> LinearRegression, KNeighborsClassifier, LogisticRegression, DecisionTreeClassifier, RandomForestClassifier</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>The Random Forest's perfect accuracy warrants validation on a larger and more diverse real-world dataset to confirm generalizability</li>
+                    <li>Missing values in Term and Property Value required row deletion, potentially introducing selection bias</li>
+                    <li>The dataset covers a single year (2019) and may not capture temporal shifts in borrower behavior</li>
+                    <li>As the dataset grows, Random Forest training time and computational cost will increase — the model is also sensitive to parameter and distributional shifts</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Continuous Monitoring:</strong> Regularly evaluate model performance against new loan data to maintain prediction accuracy</li>
+                    <li><strong>Feedback Loop:</strong> Implement a mechanism to capture actual loan outcomes and retrain the model periodically</li>
+                    <li><strong>Retraining Pipeline:</strong> Establish an automated retraining mechanism as new data accumulates to keep the model aligned with market trends</li>
+                    <li><strong>Explore Alternatives:</strong> As the dataset grows, consider Gradient Boosting or XGBoost models which may offer comparable accuracy with better scalability</li>
                 </ul>
             </div>
 
