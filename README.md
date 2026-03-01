@@ -467,7 +467,7 @@ Loan defaults pose a significant financial risk to lending institutions. Traditi
 
 ## Methodology
 
-### Milestone 1 — Exploratory Data Analysis
+### Exploratory Data Analysis
 
 Five key research questions were investigated through visualization:
 
@@ -477,7 +477,7 @@ Five key research questions were investigated through visualization:
 4. **Loan Amount Distribution:** Default cases show greater variability and higher median loan amounts — larger loans carry higher default risk, recommending tighter criteria for high-value lending
 5. **Pre-Approval Status:** Loans with pre-approval show significantly lower default rates, confirming a strong correlation between pre-approval and reduced default risk
 
-### Milestone 2 — Data Preparation
+### Data Preparation
 
 **Features Dropped (non-predictive or irrelevant):**
 - `ID` — unique identifier with no predictive value
@@ -505,13 +505,13 @@ Five key research questions were investigated through visualization:
 **Encoding:**
 - Created dummy variables using `pd.get_dummies()` for all categorical features including Gender, Pre-Approval, Loan Type, Loan Purpose, Occupancy Type, Credit Type, and more
 
-### Milestone 3 — Additional Cleaning & Full Encoding
+### Additional Cleaning & Full Encoding
 
 - Dropped remaining code-based columns replaced by description equivalents (`loan_type`, `loan_purpose`, `occupancy_type`, `loan_limit`, `interest_category`)
 - Applied full one-hot encoding across all remaining categorical variables
 - Treated `Age` and `Total Units` as categorical due to their discrete, non-continuous nature
 
-### Milestone 4 — Model Building, Evaluation & Overfitting Check
+### Model Building, Evaluation & Overfitting Check
 
 **Train/Test Split:** Standard split with `random_state=42`
 
