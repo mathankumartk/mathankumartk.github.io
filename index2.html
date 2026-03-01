@@ -171,7 +171,9 @@
                         <img src="finance_fraud.jpg" alt="Classifying Anomalous Financial Transactions">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Classifying Anomalous Financial Transactions</h3>
+                        <a href="#project_10" class="project-title-link">
+                            <h3 class="project-title">Classifying Anomalous Financial Transactions</h3>
+                        </a>
                         <p class="project-description">This project aims to develop a machine learning model that classifies financial transactions as 
                             fraudulent or legitimate by analyzing historical transaction data and identifying patterns indicative of fraud.
                         </p>
@@ -1942,6 +1944,243 @@
                     <li><strong>Genre-Specific Models:</strong> Develop separate models per genre to capture audience preference variation across categories</li>
                     <li><strong>Social Media Integration:</strong> Incorporate social media metrics and audience demographics as additional predictive signals</li>
                     <li><strong>Continuous Retraining:</strong> Schedule regular model updates with new release data to stay aligned with current industry dynamics</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project #10 Detail Section -->
+    <section id="project_10" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Anomaly Detection in Credit Card Transactions: Leveraging Machine Learning for Fraud Classification</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/10.%20Leveraging%20Machine%20Learning%20for%20Fraud%20Classification" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    A supervised binary classification project that detects and classifies fraudulent credit card transactions 
+                    using Logistic Regression, Random Forest, and XGBoost applied to a synthetic dataset of 10,000 transactions. 
+                    The project addresses the growing challenge of financial fraud by leveraging behavioral and transactional 
+                    features to move beyond traditional rule-based detection systems.
+                </p>
+                <p class="section-content">
+                    Global payment card fraud losses reached <strong>$33.41 billion in 2024</strong>, projected to reach 
+                    <strong>$49.13 billion by 2034</strong>. The U.S. bears <strong>41.87% of global fraud losses</strong> 
+                    despite representing only 26.31% of global transaction volume. Each dollar lost to fraud costs merchants 
+                    a total of <strong>$3.75</strong> when accounting for chargebacks, investigation costs, and operational overhead.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Research Questions</h3>
+                <ol class="research-list">
+                    <li>Which transactional and behavioral features most strongly predict fraud, and how do they interact?</li>
+                    <li>How do Logistic Regression, Random Forest, and XGBoost compare in fraud detection accuracy?</li>
+                    <li>Do high-risk indicators (1 AM–5 AM transactions, foreign transactions, location mismatches) amplify fraud risk?</li>
+                    <li>Do cardholder demographics (age, senior status) help identify groups more frequently targeted by fraud?</li>
+                </ol>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> Kaggle — Credit Card Fraud Detection Dataset (synthetic, designed for fraud detection research)</li>
+                    <li><strong>Size:</strong> 10,000 transaction records, 10 features</li>
+                    <li><strong>Class Distribution:</strong> 9,849 legitimate (98.5%) vs. 151 fraudulent (1.5%) — severe class imbalance</li>
+                    <li><strong>Target Variable:</strong> <code>is_fraud</code> — binary: 0 = Legitimate, 1 = Fraudulent</li>
+                </ul>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Key Features</h4>
+                    <ul class="findings-list">
+                        <li><strong><code>amount</code>:</strong> Transaction value in USD ($0.00–$1,471.04, mean $175.95)</li>
+                        <li><strong><code>transaction_hour</code>:</strong> Hour of day (0–23); used to engineer high-risk time window</li>
+                        <li><strong><code>merchant_category</code>:</strong> One of 5 types — Electronics, Travel, Grocery, Food, Clothing</li>
+                        <li><strong><code>foreign_transaction</code>:</strong> Binary — 1 if transaction occurred in a foreign country</li>
+                        <li><strong><code>location_mismatch</code>:</strong> Binary — 1 if location doesn't match cardholder's registered address</li>
+                        <li><strong><code>device_trust_score</code>:</strong> Numerical (1–100); lower scores indicate higher device risk</li>
+                        <li><strong><code>velocity_last_24h</code>:</strong> Number of transactions by the cardholder in the past 24 hours</li>
+                        <li><strong><code>cardholder_age</code>:</strong> Age in years; used to engineer senior citizen indicator</li>
+                        <li><strong><code>transaction_id</code>:</strong> Unique identifier — dropped during preprocessing (no predictive value)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Data Preprocessing</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Validation &amp; Cleaning</h4>
+                    <ul class="findings-list">
+                        <li>Confirmed 10,000 records across 10 features with no missing values and no duplicate rows</li>
+                        <li><code>transaction_id</code> dropped — serves only as a row identifier with no predictive value</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Encoding</h4>
+                    <ul class="findings-list">
+                        <li><strong>One-hot encoding:</strong> <code>merchant_category</code> (5 categories → 5 binary columns); original column retained for EDA interpretability</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Feature Engineering</h4>
+                    <ul class="findings-list">
+                        <li><strong><code>transaction_hour_risk_indicator</code></strong> — flags transactions between 1 AM and 5 AM as high risk (1); all other hours as low risk (0)</li>
+                        <li><strong><code>cardholder_senior_citizen</code></strong> — flags cardholders aged 65+ (1) to examine demographic targeting patterns</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Feature Scaling &amp; Class Balancing</h4>
+                    <ul class="findings-list">
+                        <li><code>StandardScaler</code> applied to <code>amount</code>, <code>device_trust_score</code>, <code>cardholder_age</code>, and <code>velocity_last_24h</code>; scaled columns retained alongside originals for EDA</li>
+                        <li><strong>SMOTE</strong> applied exclusively within the training pipeline on a <strong>70/30 train-test split</strong> (<code>random_state=42</code>), achieving a balanced 50/50 class distribution with no data leakage into the test set</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology &amp; Model Results</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Model Performance Comparison</h4>
+                    <ul class="findings-list">
+                        <li><strong>Random Baseline:</strong> Accuracy ~50%</li>
+                        <li><strong>Logistic Regression:</strong> Accuracy ~96.43%, F1 ~96.34%</li>
+                        <li><strong>XGBoost Gradient Boosting (Best):</strong> Accuracy 99.63%, Precision 99.52%, Recall 99.72%, F1 99.62% — fewest false positives and false negatives of all models</li>
+                        <li><strong>XGBoost (After GridSearchCV Tuning):</strong> Accuracy ≈ 99.75%, F1 ≈ 99.74%</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Hyperparameter Optimization (XGBoost — GridSearchCV + StratifiedKFold)</h4>
+                    <ul class="findings-list">
+                        <li>7 parameters tuned with cross-validated F1 as objective: <code>n_estimators</code>, <code>learning_rate</code>, <code>max_depth</code>, <code>subsample</code>, <code>colsample_bytree</code>, <code>min_child_weight</code>, <code>gamma</code></li>
+                        <li><strong>Recall and F1-Score</strong> prioritized as primary metrics — reflecting the cost asymmetry where a missed fraud carries far greater consequences than a false alarm</li>
+                        <li><strong>Random Forest</strong> used <code>class_weight='balanced'</code> combined with SMOTE for a double layer of imbalance correction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Strongest Fraud Predictors</h4>
+                    <ul class="findings-list">
+                        <li><strong><code>device_trust_score</code></strong> — lower trust scores concentrated in fraudulent transactions</li>
+                        <li><strong><code>location_mismatch</code></strong> — strong fraud signal; compounds with <code>foreign_transaction</code></li>
+                        <li><strong><code>foreign_transaction</code></strong> — elevated fraud rate vs. domestic transactions</li>
+                        <li><strong><code>velocity_last_24h</code></strong> — unusual spending velocity is a key behavioral signal</li>
+                        <li><strong><code>transaction_hour_risk_indicator</code></strong> — transactions between 1 AM–5 AM show elevated fraud rates</li>
+                        <li><strong><code>cardholder_senior_citizen</code></strong> — senior cardholders (65+) show demographic vulnerability patterns</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">EDA Insights (9 Visualizations)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Class Distribution</strong> — baseline visualization of the 98.5%/1.5% imbalance</li>
+                        <li><strong>Device Trust Score KDE</strong> — lower trust scores concentrated among fraudulent transactions</li>
+                        <li><strong>Cardholder Age KDE</strong> — senior citizen region (65+) highlighted with fraud rate summary</li>
+                        <li><strong>Transaction Amount Box Plot</strong> — spread, medians, and outliers compared by fraud status</li>
+                        <li><strong>Fraud Rate by Transaction Hour</strong> — 1 AM–5 AM window shows elevated rates vs. daytime average</li>
+                        <li><strong>Fraud Rate by Merchant Category</strong> — identifies highest-risk merchant types</li>
+                        <li><strong>Fraud Rate by Foreign Transaction × Location Mismatch</strong> — compound risk across four binary combinations</li>
+                        <li><strong>Correlation Heatmap</strong> — pairwise correlations across all features vs. <code>is_fraud</code></li>
+                        <li><strong>Amount vs. Device Trust Score Scatter</strong> — fraud clusters in high-amount, low-trust quadrant</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Charts for Credit Card Fraud Detection -->
+            <div class="chart-container">
+                <img src="Z_10_Chart1.png" alt="Credit Card Fraud Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart2.png" alt="Credit Card Fraud Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart3.png" alt="Credit Card Fraud Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart4.png" alt="Credit Card Fraud Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart5.png" alt="Credit Card Fraud Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart6.png" alt="Credit Card Fraud Chart 6" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart7.png" alt="Credit Card Fraud Chart 7" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_10_Chart8.png" alt="Credit Card Fraud Chart 8" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation, cleaning, and feature engineering</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> EDA visualizations — KDE plots, box plots, heatmaps, scatter plots, bar charts</li>
+                    <li><strong>Scikit-learn:</strong> Logistic Regression, Random Forest, StandardScaler, GridSearchCV, StratifiedKFold, evaluation metrics</li>
+                    <li><strong>XGBoost:</strong> Gradient boosting classifier with logloss optimization</li>
+                    <li><strong>SMOTE (imbalanced-learn):</strong> Synthetic minority oversampling within training pipeline</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Implementation Roadmap</h3>
+                <ul class="findings-list">
+                    <li><strong>Phase 1 — Model Finalization &amp; Validation (1–3 months):</strong> Finalize XGBoost with tuned hyperparameters; retrain on full preprocessed dataset with stratified sampling</li>
+                    <li><strong>Phase 2 — Interpretability &amp; Compliance (1–2 months):</strong> Integrate SHAP or LIME for feature importance rankings and individual fraud decision explanations</li>
+                    <li><strong>Phase 3 — System Integration &amp; Pilot (3–6 months):</strong> Integrate into live transaction processing pipelines; establish continuous monitoring for model drift</li>
+                    <li><strong>Phase 4 — Monitoring &amp; Scaling (Ongoing):</strong> Regular retraining with new transaction data; expand to insurance claims, loans, and digital wallet fraud detection</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Ethical Considerations</h3>
+                <ul class="findings-list">
+                    <li><strong>Algorithmic &amp; Demographic Bias:</strong> Features like <code>cardholder_age</code>, <code>foreign_transaction</code>, and <code>location_mismatch</code> risk disproportionately flagging legitimate transactions from senior citizens or frequent travelers; fraud decisions must be based on genuine signals, not demographic proxies</li>
+                    <li><strong>False Positives &amp; Customer Impact:</strong> Optimizing for recall can generate excessive false positives — declined transactions and frozen accounts for legitimate cardholders; the precision-recall tradeoff is an ethical concern, not just a modeling one</li>
+                    <li><strong>Transparency &amp; Explainability:</strong> Black-box ensembles (XGBoost, Random Forest) are difficult to interpret; financial institutions are increasingly obligated to provide explainable and auditable fraud decisions</li>
+                    <li><strong>Surveillance &amp; Profiling:</strong> Behavioral features (velocity, device trust scores, location data) raise concerns about customer profiling without explicit consent; the boundary between fraud prevention and invasive surveillance must be carefully managed</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>The synthetic dataset may not fully capture the complexity, noise, and evolving tactics of real-world fraud, limiting generalizability to live production environments</li>
+                    <li>Severe class imbalance (1.5% fraud) is a persistent challenge; SMOTE-generated samples may introduce noise not representative of genuine fraudulent behavior</li>
+                    <li>Black-box ensemble models limit interpretability, making transparent fraud flagging difficult — a critical requirement in regulated financial environments</li>
+                    <li>Models trained on this dataset may not adapt well to new fraud patterns that emerge after the training period</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations &amp; Future Work</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Real-Time Fraud Detection:</strong> Integrate trained models into live transaction processing pipelines to intercept fraudulent transactions before completion</li>
+                    <li><strong>Personalized Risk Scoring:</strong> Incorporate spending history, device fingerprinting, and geographic patterns to generate dynamic, cardholder-specific fraud risk scores</li>
+                    <li><strong>Broader Anomaly Detection:</strong> Extend feature engineering techniques to insurance claims, loan applications, and digital wallet transactions</li>
+                    <li><strong>Enhanced Feature Space:</strong> Add social media activity, merchant reputation scores, and network-based transaction relationships</li>
+                    <li><strong>Continuous Retraining:</strong> Regularly update models with new transaction data to stay responsive to evolving fraud tactics</li>
                 </ul>
             </div>
 
