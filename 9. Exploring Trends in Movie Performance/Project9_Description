@@ -1,0 +1,2 @@
+This project titled, “Exploring Trends in Movie Performance: A Machine Learning Classification Approach” aims to build and evaluate machine learning models (Logistic Regression, Random Forest, and XGBoost) that predict whether movies will receive high ratings (above 7.0). 
+The project employs feature engineering, hyperparameter tuning, and Bayesian optimization to enhance predictive accuracy and identify key factors that contribute to a movie's critical success.
