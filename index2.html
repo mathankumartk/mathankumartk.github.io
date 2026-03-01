@@ -74,7 +74,9 @@
                         <img src="housing_availability.jpg" alt="Evaluating Housing Affordability">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Evaluating Housing Affordability</h3>
+                        <a href="#project_3" class="project-title-link">
+                            <h3 class="project-title">Evaluating Housing Affordability</h3>
+                        </a>
                         <p class="project-description">The objective of this project is to analyze and predict rental prices based on various factors such as area, 
                             number of bedrooms, and availability of amenities like power backup.</p>
                     </div>
@@ -438,7 +440,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Charts for Student Performance Analysis -->
             <div class="chart-container">
                 <img src="Z_2_Chart1.png" alt="Workforce Impact Chart 1" class="chart-image">
@@ -447,13 +448,13 @@
                 <img src="Z_2_Chart2.png" alt="Workforce Impact Chart 2" class="chart-image">
             </div>
             <div class="chart-container">
-                <img src="Z_3_Chart3.png" alt="Workforce Impact Chart 3" class="chart-image">
+                <img src="Z_2_Chart3.png" alt="Workforce Impact Chart 3" class="chart-image">
             </div>
             <div class="chart-container">
-                <img src="Z_3_Chart4.png" alt="Workforce Impact Chart 3" class="chart-image">
+                <img src="Z_2_Chart4.png" alt="Workforce Impact Chart 3" class="chart-image">
             </div>
             <div class="chart-container">
-                <img src="Z_3_Chart5.png" alt="Workforce Impact Chart 3" class="chart-image">
+                <img src="Z_2_Chart5.png" alt="Workforce Impact Chart 3" class="chart-image">
             </div>
             <div class="project-section">
                 <h3 class="section-heading">Tools and Techniques</h3>
@@ -491,6 +492,159 @@
                     the quality of life and academic achievements of students. Future research should focus on larger, more diverse datasets and 
                     integrated surveys to enhance the reliability and applicability of findings.
                 </p>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Project #3 Detail Section -->
+    <section id="project_3" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Evaluating Housing Affordability</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/3.%20Evaluating%20Housing%20Affordability" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    This project analyzes and predicts rental prices for residential properties in India based on various physical 
+                    and amenity-based features. By examining factors such as living area, number of bedrooms, bathrooms, parking 
+                    availability, and power backup, the study aims to identify the key drivers of rental pricing and provide 
+                    data-driven insights for tenants, landlords, and policymakers navigating housing affordability challenges 
+                    in South Asian markets.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Objectives</h3>
+                <ul class="findings-list">
+                    <li>Analyze the relationship between property characteristics and rental prices</li>
+                    <li>Identify the most influential factors driving rental costs</li>
+                    <li>Develop predictive regression models to estimate rent based on property features</li>
+                    <li>Understand the rental distribution across income segments — particularly the affordability gap for middle and lower-income populations</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <p class="section-content">The dataset contains rental property listings with the following key variables:</p>
+                <ul class="findings-list">
+                    <li><strong>Rent:</strong> Cost of renting the home in Indian Rupees (Dependent Variable)</li>
+                    <li><strong>Area:</strong> Total square footage of the living area</li>
+                    <li><strong>Bedrooms:</strong> Number of bedrooms in the rental home</li>
+                    <li><strong>Bathrooms:</strong> Number of bathrooms in the rental home</li>
+                    <li><strong>Parking:</strong> Number of parking spaces available</li>
+                    <li><strong>Power Backup:</strong> Availability of backup power (binary — 0/1)</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">1. Exploratory Data Analysis (EDA)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Histograms</strong> to examine the distribution and normality of each variable</li>
+                        <li><strong>Descriptive Statistics</strong> to analyze skewness, central tendency, and variability across all features</li>
+                        <li><strong>Outlier Analysis</strong> using box plots — outliers were identified above the 3rd quartile and determined to be natural (true) variations representing premium properties, and were retained in the dataset</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">2. Probability Distributions</h4>
+                    <ul class="findings-list">
+                        <li><strong>PMF (Probability Mass Function):</strong> Compared rent distributions between homes with and without power backup, revealing that power backup availability is associated with higher rental prices</li>
+                        <li><strong>CDF (Cumulative Distribution Function):</strong> Revealed that approximately 80% of rental homes are priced below ₹20,000 (≈ $240 USD), confirming that the majority of the rental market serves middle-class and lower-income populations</li>
+                        <li><strong>Analytical Distribution:</strong> Fitted a theoretical distribution model against actual data, confirming close alignment between the model and observed rental price distribution</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">3. Correlation & Scatter Plot Analysis</h4>
+                    <ul class="findings-list">
+                        <li><strong>Rent vs. Total Sq. Ft. Living Area:</strong> Positive relationship identified; Spearman correlation exceeded Pearson correlation (r = 0.17), indicating a non-linear association less sensitive to outliers</li>
+                        <li><strong>Rent vs. Number of Bedrooms:</strong> Strong positive linear relationship confirmed; correlation coefficient of 0.69 indicates that number of bedrooms is the strongest individual predictor of rent</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">4. Hypothesis Testing</h4>
+                    <ul class="findings-list">
+                        <li>Conducted hypothesis testing on parking amenities and rent — p-value &lt; 0.05, confirming that parking availability is a statistically significant predictor of rental price</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">5. Regression Analysis</h4>
+                    <ul class="findings-list">
+                        <li><strong>Single Explanatory Variable (Number of Bedrooms):</strong> R² = 0.476, indicating that number of bedrooms alone explains approximately 47.6% of the variability in rent</li>
+                        <li><strong>Multiple Explanatory Variables (Bedrooms, Bathrooms, Power Backup, Gated Community, Furnishing):</strong> R² = 0.542, indicating that the combined model explains approximately 54.2% of the variability in rent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+                <ul class="findings-list">
+                    <li><strong>Number of Bedrooms</strong> is the strongest individual predictor of rent, with a correlation coefficient of 0.69 and an R² of 0.476 in single-variable regression</li>
+                    <li><strong>Power Backup</strong> availability is associated with higher rental prices, as evidenced by PMF comparison</li>
+                    <li><strong>80% of rental homes</strong> are priced below ₹20,000 (~$240 USD), confirming that the rental market is predominantly serving middle-class and lower-income populations</li>
+                    <li>Multiple regression combining bedrooms, bathrooms, power backup, gated community, and furnishing improved the model's explanatory power to 54.2%</li>
+                    <li>Outliers in rent and bedroom/bathroom counts represent premium properties in upscale localities and were retained as true natural variations</li>
+                </ul>
+            </div>
+            <!-- Charts for Evaluating Housing Affordability -->
+            <div class="chart-container">
+                <img src="Z_3_Chart1.png" alt="Workforce Impact Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_3_Chart2.png" alt="Workforce Impact Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_3_Chart3.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_3_Chart4.png" alt="Workforce Impact Chart 3" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation and numerical analysis</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> Data visualization (histograms, scatter plots, box plots)</li>
+                    <li><strong>SciPy:</strong> Statistical analysis, hypothesis testing, and distribution fitting</li>
+                    <li><strong>Scikit-learn:</strong> Regression modeling and model evaluation</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>The dataset is specific to the Indian rental market and may not generalize to other geographies or housing markets</li>
+                    <li>The multiple regression model explains only 54.2% of rental price variability, suggesting that additional features — such as location, proximity to transit, and neighborhood quality — could significantly improve predictive performance</li>
+                    <li>Positive skewness in rent and area distributions indicates that the model may be less accurate for premium high-value properties at the upper tail of the distribution</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Future Work</h3>
+                <ul class="opportunities-list">
+                    <li>Incorporate location-based features (e.g., city, neighborhood, proximity to schools and transit) to improve model accuracy</li>
+                    <li>Explore non-linear models such as Random Forest or Gradient Boosting to better capture complex relationships between features and rent</li>
+                    <li>Expand the dataset to include diverse geographies for broader applicability and cross-market comparison</li>
+                    <li>Apply clustering techniques to segment rental markets by price tier and identify affordability gaps by region</li>
+                </ul>
             </div>
 
             <div class="back-to-projects">
