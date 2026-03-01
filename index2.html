@@ -144,7 +144,9 @@
                         <img src="accident_severity.jpg" alt="Predicting US Traffic Accident Severity">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Predicting US Traffic Accident Severity</h3>
+                        <a href="#project_8" class="project-title-link">
+                            <h3 class="project-title">Predicting US Traffic Accident Severity</h3>
+                        </a>
                         <p class="project-description">This project aims to addresses the critical challenge faced by auto insurance companies, public safety agencies, 
                             and transportation departments in transitioning from reactive accident response to proactive prevention and resource optimization.
                         </p>
@@ -1341,7 +1343,7 @@
                     <img src="Z_7_Chart2.png" alt="Child Care Affordability Chart 2" class="chart-image">
                 </div>
                 <div class="chart-container" style="flex:1;">
-                    <img src="Z_7_Chart5.png" alt="Child Care Affordability Chart 3" class="chart-image">
+                    <img src="Z_7_Chart5.png" alt="Child Care Affordability Chart 5" class="chart-image">
                 </div>
             </div>
             <!-- Charts 4 & 3 — side by side -->
@@ -1350,7 +1352,7 @@
                     <img src="Z_7_Chart4.png" alt="Child Care Affordability Chart 4" class="chart-image">
                 </div>
                 <div class="chart-container" style="flex:1;">
-                    <img src="Z_7_Chart3.png" alt="Child Care Affordability Chart 5" class="chart-image">
+                    <img src="Z_7_Chart3.png" alt="Child Care Affordability Chart 3" class="chart-image">
                 </div>
             </div>
             <!-- Charts 6 & 7 — side by side -->
@@ -1368,7 +1370,7 @@
                     <img src="Z_7_Chart8.png" alt="Child Care Affordability Chart 8" class="chart-image">
                 </div>
                 <div class="chart-container" style="flex:1;">
-                    <img src="Z_7_Chart12.png" alt="Child Care Affordability Chart 10" class="chart-image">
+                    <img src="Z_7_Chart12.png" alt="Child Care Affordability Chart 12" class="chart-image">
                 </div>
             </div>
             <!-- Charts 11 & 10 — side by side -->
@@ -1448,6 +1450,240 @@
                     <li><strong>Policy:</strong> Advocate for comprehensive family leave policies and flexible work arrangements that reduce financial strain on parents</li>
                     <li><strong>Communication:</strong> Improve outreach to ensure families are informed about available subsidies, resources, and child care programs</li>
                     <li><strong>Employer Engagement:</strong> Encourage employers to adopt remote work and flexible hours to help parents balance work and child care responsibilities</li>
+                </ul>
+            </div>
+
+            <div class="back-to-projects">
+                <a href="#projects" class="back-button">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project #8 Detail Section -->
+    <section id="project_8" class="project-detail">
+        <div class="project-detail-container">
+            <h2 class="project-detail-title">Predicting Severity of US Car Accidents — A Machine Learning Approach</h2>
+
+            <div class="project-detail-nav">
+                <a href="https://github.com/mathankumartk/mathankumartk.github.io/tree/main/8.%20Predicting%20US%20Traffic%20Accident%20Severity" class="github-button" target="_blank" rel="noopener noreferrer">
+                    <svg class="github-icon" height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Project Overview</h3>
+                <p class="section-content">
+                    A supervised machine learning project that classifies the severity of U.S. traffic accidents using a dataset of 
+                    7.7 million records. Auto insurance companies, public safety agencies, and state transportation departments face 
+                    growing challenges from severe traffic accidents — increasing claims, operational disruptions, and budget constraints. 
+                    This project addresses the core challenge of transitioning from reactive response to proactive, data-driven prevention 
+                    and resource optimization.
+                </p>
+                <p class="section-content">
+                    In <strong>2024</strong>, early NHTSA estimates indicate <strong>39,345 lives were lost</strong> in traffic accidents, 
+                    representing an economic loss exceeding <strong>$340 billion annually</strong> in medical expenses, lost productivity, 
+                    property damage, and emergency services.
+                </p>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Dataset</h3>
+                <ul class="findings-list">
+                    <li><strong>Source:</strong> Kaggle — US Accidents (2016–2023)</li>
+                    <li><strong>Size:</strong> ~7.7 million unique car accident records, 46 features each</li>
+                    <li><strong>Coverage:</strong> February 2016 – March 2023 across 49 U.S. states (Alaska excluded)</li>
+                    <li><strong>Data Sources:</strong> U.S. and state transportation departments, law enforcement, traffic cameras, road sensors</li>
+                    <li><strong>Target Variable:</strong> <code>Severity</code> — ordinal scale from 1 (least severe) to 4 (most severe), representing traffic disruption impact</li>
+                </ul>
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Feature Groups</h4>
+                    <ul class="findings-list">
+                        <li><strong>Temporal:</strong> Start/end time, sunrise/sunset, civil/nautical/astronomical twilight, year, month, hour, weekday, is_weekend</li>
+                        <li><strong>Locational:</strong> City, county, state, time zone</li>
+                        <li><strong>Environmental:</strong> Temperature, wind chill, humidity, pressure, visibility, wind speed, precipitation, weather condition</li>
+                        <li><strong>Infrastructural:</strong> Binary indicators for amenity, bump, crossing, junction, roundabout, traffic signal, railway, stop, station</li>
+                        <li><strong>Descriptive:</strong> Free-text accident narrative — used for feature extraction only</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Data Preprocessing</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Missing Value Handling</h4>
+                    <ul class="findings-list">
+                        <li>Critical columns (<code>Description</code>, <code>City</code>, <code>Weather_Condition</code>, <code>Sunrise_Sunset</code>, twilight fields, temperature) → rows with NaN values deleted</li>
+                        <li>Continuous features (<code>Humidity</code>, <code>Pressure</code>, <code>Visibility</code>, <code>Wind_Direction</code>, <code>Wind_Speed</code>, <code>Precipitation</code>) → interpolation used to preserve records</li>
+                        <li><code>Wind_Chill</code> → estimated using a scientific formula for missing values</li>
+                        <li>All remaining NaN rows removed after imputation</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Encoding</h4>
+                    <ul class="findings-list">
+                        <li><strong>Binary encoding:</strong> Boolean infrastructure features (<code>Amenity</code>, <code>Bump</code>, <code>Traffic_Signal</code>, etc.)</li>
+                        <li><strong>Ordinal encoding:</strong> <code>Sunrise_Sunset</code> and twilight conditions (natural ordering preserved)</li>
+                        <li><strong>One-hot encoding:</strong> <code>TimeZone</code> and <code>Weather_Group</code></li>
+                        <li><strong>Binning:</strong> Continuous features grouped into range categories; <code>Weather_Condition</code> consolidated into broader groups</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Feature Engineering</h4>
+                    <ul class="findings-list">
+                        <li>Column names standardized to uppercase with underscores</li>
+                        <li>Timestamps converted to proper formats</li>
+                        <li>New features derived from <code>Start_Time</code> and <code>End_Time</code>: <code>Year</code>, <code>Month</code>, <code>Day</code>, <code>Hour</code>, <code>Weekday</code>, <code>Is_Weekend</code></li>
+                        <li>Non-predictive columns dropped for a focused numerical feature set</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Methodology &amp; Model Results</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Imbalanced Dataset Results</h4>
+                    <ul class="findings-list">
+                        <li><strong>Logistic Regression:</strong> Accuracy 79.67% | Precision 72.99% | Recall 79.67% | F1 73.16%</li>
+                        <li><strong>Random Forest:</strong> Accuracy 79.93% | Precision 74.33% | Recall 79.93% | F1 75.03%</li>
+                        <li><strong>Gradient Boosting (Best — Imbalanced):</strong> Accuracy 80.97% | Precision 77.00% | Recall 80.97% | F1 74.67%</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">After Class Balancing (SMOTE / Stratified Sampling)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Logistic Regression:</strong> Accuracy 66.52% | Precision 65.53% | Recall 66.52% | F1 65.68%</li>
+                        <li><strong>Random Forest (Best Overall):</strong> Accuracy 93.51% | Precision 93.51% | Recall 93.51% | F1 93.51% — strong class-level recall across all severity levels</li>
+                        <li><strong>Gradient Boosting:</strong> Accuracy 76.71% | Precision 76.40% | Recall 76.71%</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Hyperparameter Tuning (Random Forest)</h4>
+                    <ul class="findings-list">
+                        <li><strong>Grid Search</strong> (12 fits, 4 candidates): Best params — criterion=gini, max_depth=10, max_features=sqrt, n_estimators=50 → Score ~0.807</li>
+                        <li><strong>Random Search</strong> (200 fits, 40 candidates): Best params — n_estimators=300, max_features=sqrt, max_depth=20, criterion=gini → Score ~0.809</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Key Findings</h3>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Highest Positive Correlations with Severity</h4>
+                    <ul class="findings-list">
+                        <li><strong>DISTANCE_RANGE_CODE</strong> (+0.0568) — longer traffic disruption distances linked to higher severity</li>
+                        <li><strong>WEATHER_RAIN</strong> (+0.0484) — rain conditions associated with more severe accidents</li>
+                        <li><strong>JUNCTION</strong> (+0.0440) — proximity to junctions increases severity risk</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Notable Negative Correlations with Severity</h4>
+                    <ul class="findings-list">
+                        <li><strong>END_YEAR / START_YEAR</strong> (−0.2303) — more recent accidents trend toward lower severity ratings, possibly reflecting improved safety measures or reporting practices</li>
+                        <li><strong>CROSSING</strong> (−0.1045) and <strong>TRAFFIC_SIGNAL</strong> (−0.1023) — controlled environments associated with reduced severity</li>
+                    </ul>
+                </div>
+
+                <div class="findings-subsection">
+                    <h4 class="subsection-title">Geographic Insights</h4>
+                    <ul class="findings-list">
+                        <li>California accounted for 22.53% of total accidents nationally</li>
+                        <li>Florida and California experienced the highest accident volumes overall</li>
+                        <li>Severity 2 dominated at ~80% of records; Severity 4 represented fewer than 3%</li>
+                        <li>A notable spike in severe accidents was observed in 2022, suggesting changes in incident frequency or reporting practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Charts for Traffic Accident Severity -->
+            <div class="chart-container">
+                <img src="Z_8_Chart1.png" alt="Traffic Accident Severity Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart2.png" alt="Traffic Accident Severity Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart3.png" alt="Traffic Accident Severity Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart4.png" alt="Traffic Accident Severity Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart5.png" alt="Traffic Accident Severity Chart 5" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart6.png" alt="Traffic Accident Severity Chart 1" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart7.png" alt="Traffic Accident Severity Chart 2" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart8.png" alt="Traffic Accident Severity Chart 3" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart9.png" alt="Traffic Accident Severity Chart 4" class="chart-image">
+            </div>
+            <div class="chart-container">
+                <img src="Z_8_Chart10.png" alt="Traffic Accident Severity Chart 5" class="chart-image">
+            </div>
+            <div class="project-section">
+                <h3 class="section-heading">Tools &amp; Technologies</h3>
+                <ul class="findings-list">
+                    <li><strong>Python:</strong> Primary programming language</li>
+                    <li><strong>Pandas &amp; NumPy:</strong> Data manipulation, cleaning, and feature engineering</li>
+                    <li><strong>Matplotlib &amp; Seaborn:</strong> EDA visualizations — density plots, bar charts, correlation heatmaps</li>
+                    <li><strong>Scikit-learn:</strong> Logistic Regression, Random Forest, Gradient Boosting, GridSearchCV, evaluation metrics</li>
+                    <li><strong>SMOTE:</strong> Synthetic oversampling for class balancing</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Implementation Roadmap</h3>
+                <ul class="findings-list">
+                    <li><strong>Phase 1 — Model Finalization &amp; Validation (1–3 months):</strong> Retrain top model on full preprocessed dataset with class weighting/stratified sampling</li>
+                    <li><strong>Phase 2 — Interpretability &amp; Compliance (1–2 months):</strong> Integrate SHAP or LIME for feature importance and individual prediction explanations</li>
+                    <li><strong>Phase 3 — System Integration &amp; Pilot (3–6 months):</strong> Deploy to transportation systems; establish real-time inference pipelines and performance monitoring</li>
+                    <li><strong>Phase 4 — Monitoring &amp; Scaling (Ongoing):</strong> Track model drift, prediction accuracy, and business impact (e.g., response time reductions); retrain with post-2023 data</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Ethical Considerations</h3>
+                <ul class="findings-list">
+                    <li><strong>Data Privacy:</strong> No explicit personal identifiers present; location data aggregated or coarsened in public results; free-text descriptions used only for feature extraction</li>
+                    <li><strong>Bias:</strong> Historical reporting practices may skew severity scoring by geography or socioeconomics; fairness assessments conducted across states and urban/rural divides</li>
+                    <li><strong>Misuse Prevention:</strong> Outputs reflect statistical patterns only and require human oversight — not to be used to deny insurance claims, assign victim blame, or reduce emergency response coverage</li>
+                    <li><strong>Transparency:</strong> All code, preprocessing steps, and model artifacts version-controlled and shared within data licensing constraints to enable independent auditing</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Limitations</h3>
+                <ul class="challenges-list">
+                    <li>Alaska excluded from the dataset, limiting national representativeness</li>
+                    <li>Dataset lacks direct indicators for driver impairment (DUI), detailed road surface conditions, and vehicle-specific data</li>
+                    <li>Extreme class imbalance (Severity 2 ≈ 80% of records; Severity 4 &lt; 3%) required sampling that limits use of the full 7.7 million records during training</li>
+                    <li>Models trained on 2016–2023 data may not generalize to future trends such as electric vehicle adoption, autonomous driving, or shifting climate conditions</li>
+                </ul>
+            </div>
+
+            <div class="project-section">
+                <h3 class="section-heading">Recommendations</h3>
+                <ul class="opportunities-list">
+                    <li><strong>Ensemble Models:</strong> Prioritize Random Forest or Gradient Boosting (augmented with XGBoost or LightGBM) in production, combined with robust class-balancing techniques such as SMOTE or class-weighted loss functions</li>
+                    <li><strong>Data Collection:</strong> Establish live data feeds and explore options to incorporate records for Alaska</li>
+                    <li><strong>Continuous Validation:</strong> Ongoing model validation with post-2023 data is essential to adapt to evolving trends in vehicle technology and driving behavior</li>
+                    <li><strong>Real-Time Deployment:</strong> Integrate into intelligent transportation systems to enable real-time severity forecasting, allowing emergency services to preposition resources and optimize dispatch priorities</li>
                 </ul>
             </div>
 
